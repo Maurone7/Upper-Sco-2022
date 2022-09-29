@@ -5,6 +5,7 @@ import numpy as np
 temperature_list = []
 luminosity_list = []
 
+
 #model, shells, AGE, log(L/L_sun), log(R/R_sun), log(g), log(T_eff)
 models_10Myr = [
                 360, 693, 1.00463687E-02, 7.32102551E-01, 3.22826454E-01, 3.98533477E+00, 3.78324183E+00, #model_M1560
