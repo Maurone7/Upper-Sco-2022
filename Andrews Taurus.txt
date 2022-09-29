@@ -1,0 +1,222 @@
+Table 2 
+Millimeter-wave Continuum Photometry Catalog
+
+
+Name	Spectral Type^a	Ref.^b	F_0.89mm^c	F_1.3mm^c	Notes^d	
+(Jy)	(Jy)	
+IRAS 04108+2910	M0	1	<0.0517	<0.0198	e, m	
+J04141188+2811535	M6.25	1	<0.0509	<0.0195	e, m	
+FM Tau	M0	1	0.0288 +or- 0.0091	0.0131 +or- 0.0027	m, e	
+FN Tau	M5	1	0.0365 +or- 0.0050	0.0168 +or- 0.0021	m, e	
+CW Tau	K3	1	0.1601 +or- 0.0268	0.0523 +or- 0.0070	m, m	
+CIDA 1	M5.5	1	0.0353 +or- 0.0174	0.0135 +or- 0.0028	e, m	
+MHO 1	M2.5	1	0.5295 +or- 0.1207	0.2493 +or- 0.0311	e, m	
+MHO 2 AB	M2.5, M5.5 +or- 3	1, est	0.3017 +or- 0.0555	0.1377 +or- 0.0142	e, m	
+MHO 3 AB	K7, M2 +or- 3	1, est	<0.0313	<0.0120	e, m	
+FP Tau	M4	1	<0.0243	<0.0093	e, m	
+CX Tau	M2.5	1	0.0251 +or- 0.0076	0.0094 +or- 0.0023	m, e	
+FO Tau A	M3.5	2	0.0130 +or- 0.0030	0.0050 +or- 0.0025	(m, e)	
+FO Tau B	M3.5	2	<0.0090	<0.0034	(m, e)	
+J04153916+2818586	M3.75	1	0.0350 +or- 0.0161	0.0134 +or- 0.0014	e, m	
+IRAS 04125+2902	M1.25	1	0.0400 +or- 0.0042	0.0199 +or- 0.0025	m, m	
+J04155799+2746175	M5.5	1	0.0329 +or- 0.0152	0.0126 +or- 0.0014	e, m	
+J04161210+2756385	M4.75	1	<0.0110	<0.0042	e, m	
+J04163911+2858491	M5.5	1	<0.0065	<0.0025	e, m	
+CY Tau	M1.5	1	0.1637 +or- 0.0130	0.0794 +or- 0.0059	m, m	
+KPNO 10	M5	1	0.0204 +or- 0.0098	0.0078 +or- 0.0014	e, m	
+V410 X-ray 1	M4	1	<0.0090	<0.0034	m, e	
+V409 Tau	M1.5	1	0.0488 +or- 0.0222	0.0187 +or- 0.0014	e, m	
+V410 Anon 13	M5.75	1	<0.0235	<0.0090	e, m	
+DD Tau A	M3.5	2	0.0240 +or- 0.0030	0.0092 +or- 0.0043	e, m	
+DD Tau B	M3.5	2	0.0090 +or- 0.0030	0.0034 +or- 0.0019	e, m	
+CZ Tau A	M3	1	<0.0090	<0.0034	m, e	
+CZ Tau B	M6 +or- 3	est	<0.0090	<0.0034	m, e	
+V410 X-ray 2	M0	1	0.0261 +or- 0.0034	0.0154 +or- 0.0023	m, m	
+V892 Tau AB	B8 +or- 3, B8 +or- 3	3	0.5922 +or- 0.0586	0.2290 +or- 0.0145	m, m	
+LR 1	K4.5	1	0.0804 +or- 0.0363	0.0308 +or- 0.0016	e, m	
+V410 X-ray 7 AB	M0.75, M2.75 +or- 2	1, est	<0.0340	<0.0130	e, m	
+V410 X-ray 6	M5.5	1	<0.0055	<0.0021	e, m	
+KPNO 12	M9	1	<0.0055	<0.0021	e, m	
+FQ Tau A	M3	2	0.0080 +or- 0.0020	0.0031 +or- 0.0016	m, e	
+FQ Tau B	M3.5	2	<0.0050	<0.0019	m, e	
+BP Tau	K7	1	0.1297 +or- 0.0115	0.0415 +or- 0.0022	m, m	
+V819 Tau	K7	1	<0.0090	<0.0025	m, m	
+FR Tau	M5.25	1	<0.0392	<0.0150	e, m	
+J04201611+2821325	M6.5	1	<0.0044	<0.0017	e, m	
+J04202144+2813491	M1	1	0.1369 +or- 0.0615	0.0524 +or- 0.0015	e, m	
+J04202555+2700355	M5.25	1	0.0219 +or- 0.0105	0.0084 +or- 0.0014	e, m	
+IRAS 04173+2812	M4	1	<0.0052	<0.0020	e, m	
+J04202606+2804089	M3.5	1	<0.0112	<0.0043	e, m	
+J04210795+2702204	M5.25	1	<0.0071	<0.0027	e, m	
+J04210934+2750368	M5.25	1	<0.0047	<0.0018	e, m	
+J04213459+2701388	M5.5	1	<0.0078	<0.0030	e, m	
+IRAS 04187+1927	M0	1	<0.0165	<0.0063	e, m	
+J04214631+2659296	M5.75	1	<0.0102	<0.0039	e, m	
+DE Tau	M1	1	0.0843 +or- 0.0103	0.0311 +or- 0.0031	m, m	
+RY Tau	K1	1	0.4987 +or- 0.0334	0.1925 +or- 0.0091	m, m	
+T Tau N	K0	1	0.5707 +or- 0.0431	0.2272 +or- 0.0126	m, m	
+FS Tau A	M0	2	0.0449 +or- 0.0085	0.0182 +or- 0.0051	(m, e)	
+FS Tau B	M3.5	2	<0.0255	<0.0101	(m, e)	
+J04221675+2654570	M1.5	1	<0.0110	<0.0042	e, m	
+IRAS 04196+2638	M1	1	0.1332 +or- 0.0599	0.0510 +or- 0.0012	e, m	
+J04230607+2801194	M6	1	0.0133 +or- 0.0066	0.0051 +or- 0.0011	e, m	
+IRAS 04200+2759	M2	4	0.0956 +or- 0.0430	0.0366 +or- 0.0013	e, m	
+J04231822+2641156	M3.5	1	<0.0102	<0.0039	e, m	
+FU Tau A	M7.25	1	<0.0044	<0.0017	e, m	
+FU Tau B	M9.25	1	<0.0044	<0.0017	e, m	
+FT Tau	(K6-M3.5)	1	0.1217 +or- 0.0095	0.0629 +or- 0.0043	m, m	
+J04242090+2630511	M6.5	1	<0.0037	<0.0014	e, m	
+J04242646+2649503	M5.75	1	<0.0078	<0.0030	e, m	
+IRAS 04216+2603	M0.5	1	<0.0517	0.0198	e, m	
+IP Tau	M0	1	0.0320 +or- 0.0058	0.0088 +or- 0.0015	m, m	
+KPNO 3	M6	1	0.0151 +or- 0.0075	0.0058 +or- 0.0012	e, m	
+FV Tau A	K5	2	0.0150 +or- 0.0010	0.0057 +or- 0.0026	m, e	
+FV Tau B	K6	5	0.0110 +or- 0.0010	0.0042 +or- 0.0019	m, e	
+FV Tau/c A	M2.5	2	<0.0050	<0.0019	m, e	
+FV Tau/c B	M3.5	2	<0.0050	<0.0019	m, e	
+KPNO 13	M5	1	<0.0094	<0.0036	e, m	
+DF Tau AB	M2, M2.5	2, 2	0.0088 +or- 0.0019	0.0034 +or- 0.0017	m, e	
+DG Tau	K6	1	0.9447 +or- 0.0780	0.3442 +or- 0.0178	m, m	
+J04284263+2714039 A	M5.25	1	<0.0078	<0.003	e, m	
+J04284263+2714039 B	M7 +or- 2	est	<0.0078	<0.003	e, m	
+J04290068+2755033	M8.25	1	<0.0042	<0.0016	e, m	
+IRAS 04260+2642	K5.5	1	0.2706 +or- 0.0500	0.1200 +or- 0.0100	e, m	
+IRAS 04263+2654	M5.25	1	<0.0091	<0.0035	e, m	
+XEST 13-010	M3	1	0.0397 +or- 0.0181	0.0152 +or- 0.0012	e, m	
+DH Tau A	M1	1	0.0470 +or- 0.0040	0.0180 +or- 0.0082	m, e	
+DH Tau B	M7.5	6	<0.0100	<0.0038	m, e	
+IQ Tau	M0.5	1	0.1668 +or- 0.0158	0.0619 +or- 0.0045	m, m	
+J04295950+2433078	M5	1	<0.0089	<0.0034	e, m	
+UX Tau A	K2	7	0.1494 +or- 0.0106	0.0545 +or- 0.0083	m, m	
+KPNO 6	M8.5	1	<0.0063	<0.0024	e, m	
+FX Tau A	M1	8	0.0240 +or- 0.0030	0.0092 +or- 0.0043	m, e	
+FX Tau B	M4	8	<0.0050	<0.0019	m, e	
+DK Tau A	K8	8	0.0575 +or- 0.0077	0.0166 +or- 0.0033	m, e	
+DK Tau B	M1	8	<0.0030	<0.0011	m, e	
+ZZ Tau AB	M3, M4.5 +or- 2	1, est	<0.0080	<0.0031	m, e	
+ZZ Tau IRS	M5	1	0.2763 +or- 0.1241	0.1058 +or- 0.0015	e, m	
+KPNO 7	M8.25	1	<0.0068	<0.0026	e, m	
+JH 56	M0.5	1	<0.0080	<0.0031	m, e	
+XZ Tau A	M2	2	0.0100 +or- 0.0020	0.0038 +or- 0.0019	(m, e)	
+XZ Tau B	M3.5	2	<0.0060	<0.0023	(m, e)	
+HK Tau A	M0.5	1	0.0811 +or- 0.0089	0.0313 +or- 0.0022	m, m	
+HK Tau B	M2	1	0.0456 +or- 0.0059	0.0145 +or- 0.0018	m, m	
+V710 Tau A^e	M0.5	1	0.1193 +or- 0.0142	0.0299 +or- 0.0045	m, m	
+LkHalpha 267	M3	9	<0.0220	<0.0120	m, m	
+Haro 6-13	M0	1	0.2735 +or- 0.0294	0.1196 +or- 0.0057	m, m	
+MHO 5	M6	1	<0.0235	<0.0090	e, m	
+MHO 6	M4.75	1	0.353 +or- 0.0167	0.0135 +or- 0.0020	e, m	
+J04322415+2251083	M4.5	1	<0.0157	<0.0060	e, m	
+GG Tau Aab	K7, M0.5	10, 10	1.3447 +or- 0.0907	0.4644 +or- 0.0239	m, m	
+GG Tau Ba	M5.5	10	<0.0183	<0.0070	e, m	
+GG Tau Bb	M7.5	10	<0.0183	<0.0070	e, m	
+FY Tau	K5	1	0.0376 +or- 0.0068	0.0138 +or- 0.0051	e, m	
+FZ Tau	M0	1	0.0306 +or- 0.0068	0.0137 +or- 0.0024	m, e	
+UZ Tau Wa	M2	2	0.0354 +or- 0.0039	0.0162 +or- 0.0039	m, m	
+UZ Tau Wb	M3	2	0.0401 +or- 0.0043	0.0310 +or- 0.0041	m, m	
+UZ Tau Eab	M1, M4	11, 11	0.3472 +or- 0.0343	0.1281 +or- 0.0073	m, m	
+JH 112 A	K6	1	0.0100 +or- 0.0030	0.0038 +or- 0.0021	m, e	
+JH 112 B	M8.5 +or- 2	est	0.0050 +or- 0.0030	0.0019 +or- 0.0014	m, e	
+J04324938+2253082	M4.25	1	<0.0060	<0.0023	m, e	
+GH Tau A	M2	2	0.0150 +or- 0.0030	0.0057 +or- 0.0028	(m, e)	
+GH Tau B	M2	2	<0.0090	<0.0034	(m, e)	
+V807 Tau A^e	K7	12	0.0200 +or- 0.0030	0.0077 +or- 0.0036	(m, e)	
+J04330945+2246487	M6	1	<0.0068	<0.0026	e, m	
+IRAS 04301+2608	M0	1	0.0180 +or- 0.0060	0.0066 +or- 0.0037	m, e	
+IRAS 04303+2240	M0.5	1	<0.0157	<0.0060	e, m	
+J04333278+1800436	M1	1	0.0287 +or- 0.0138	0.0110 +or- 0.0019	e, m	
+GI Tau	K7	1	0.0313 +or- 0.0143	0.0120 +or- 0.0010	e, m	
+GK Tau	K7	1	0.0078 +or- 0.0044	0.0030 +or- 0.0010	e, m	
+IS Tau A	M0	2	0.0300 +or- 0.0030	0.0115 +or- 0.0053	(m, e)	
+IS Tau B	M3.5	2	<0.0090	<0.0034	(m, e)	
+DL Tau	K7	1	0.4702 +or- 0.0357	0.1688 +or- 0.0108	m, m	
+J04333905+2227207	M1.75	1	0.0810 +or- 0.0367	0.0310 +or- 0.0020	e, m	
+HN Tau A	K5	13	0.0340 +or- 0.0030	0.0130 +or- 0.0060	m, e	
+HN Tau B	M4	13	<0.0060	<0.0023	m, e	
+J04334171+1750402	M4	1	0.0157 +or- 0.0088	0.0060 +or- 0.0020	e, m	
+J04334465+2615005	M4.75	1	0.0478 +or- 0.0219	0.0183 +or- 0.0017	e, m	
+DM Tau	M1	1	0.2370 +or- 0.0117	0.0894 +or- 0.0031	m, m	
+CI Tau	K7	1	0.2636 +or- 0.0191	0.1057 +or- 0.0057	m, m	
+IT Tau A	K3	8	0.0160 +or- 0.0020	0.0061 +or- 0.0029	m, e	
+IT Tau B	M4	8	0.0110 +or- 0.0030	0.0042 +or- 0.0022	m, e	
+AA Tau	K7	1	0.1394 +or- 0.0082	0.0650 +or- 0.0035	m, m	
+HO Tau	M0.5	1	0.0427 +or- 0.0079	0.0177 +or- 0.0033	m, e	
+DN Tau	M0	1	0.2101 +or- 0.0182	0.0823 +or- 0.0045	m, m	
+CoKu Tau/3 A	M1	1	<0.0080	<0.0031	m, e	
+CoKu Tau/3 B	M4.5 +or- 2	est	<0.0080	<0.0031	m, e	
+HQ Tau	K2	1	0.0110 +or- 0.0030	0.0042 +or- 0.0022	m, e	
+HP Tau	K3	1	0.1136 +or- 0.0161	0.0517 +or- 0.0047	e, m	
+Haro 6-28 A	M2	2	0.0110 +or- 0.0035	0.0049 +or- 0.0012	(m, e)	
+Haro 6-28 B	M3.5	2	<0.0105	<0.0051	(m, e)	
+J04362151+2351165	M5.25	1	<0.0141	<0.0054	e, m	
+ITG 1	(M3.5-M6)	1	<0.0060	<0.0023	e, m	
+J04381486+2611399	M7.25	1	0.0060 +or- 0.0034	0.0023 +or- 0.0008	e, m	
+GM Tau	M6.5	1	<0.0125	<0.0048	e, m	
+DO Tau	M0	1	0.2528 +or- 0.0258	0.1082 +or- 0.0069	m, m	
+HV Tau C	K6	1	0.0474 +or- 0.0070	0.0231 +or- 0.0026	m, m	
+J04385859+2336351	M4.25	1	0.0345 +or- 0.0162	0.0132 +or- 0.0018	e, m	
+J04390163+2336029	M6	1	<0.0172	<0.0066	e, m	
+J04390396+2544264	M7.25	1	0.0076 +or- 0.0040	0.0029 +or- 0.0008	e, m	
+VY Tau A	M0	1	<0.0100	<0.0038	m, e	
+VY Tau B	M4.5 +or- 2	est	<0.0100	<0.0038	m, e	
+LkCa 15	K5	1	0.3852 +or- 0.0224	0.1270 +or- 0.0049	m, m	
+GN Tau A	M2.5	1	0.0120 +or- 0.0030	0.0046 +or- 0.0024	(m, e)	
+GN Tau B	M2.5 +or- 1.5	est	<0.0090	<0.0034	(m, e)	
+J04393364+2359212	M5	1	<0.0151	<0.0058	e, m	
+ITG 15	M5	1	<0.0157	<0.0060	e, m	
+CFHT 4	M7	1	0.0090 +or- 0.0024	0.0020 +or- 0.0005	m, m	
+J04400067+2358211	M6	1	<0.0146	<0.0056	e, m	
+IRAS 04370+2559	(K6-M3.5)	1	0.1350 +or- 0.0606	0.0517 +or- 0.0008	e, m	
+J04403979+2519061 AB	M5.25, M7 +or- 2	1, est	<0.0042	<0.0016	e, m	
+JH 223 A	M2	1	<0.0070	<0.0027	m, e	
+JH 223 B	M6 +or- 2	est	<0.0070	<0.0027	m, e	
+ITG 33A	M3	1	<0.0133	<0.0051	e, m	
+ITG 34	M5.5	1	<0.0141	<0.0054	e, m	
+CoKu Tau/4 AB	M1.5, M2 +or- 2	1, est	0.0090 +or- 0.0029	0.0034 +or- 0.0019	m, e	
+ITG 40	M3.5	1	<0.0157	<0.0060	e, m	
+IRAS 04385+2550	M0	1	0.0593 +or- 0.0084	0.0255 +or- 0.0022	e, m	
+J04414489+2301513	M8.5	1	<0.0627	<0.0240	e, m	
+J04414825+2534304	M7.75	1	0.0057 +or- 0.0028	0.0022 +or- 0.0004	e, m	
+V955 Tau A	K7	2	0.0140 +or- 0.0020	0.0054 +or- 0.0025	(m, e)	
+V955 Tau B	M2.5	2	<0.0060	<0.0023	(m, e)	
+CIDA 7	M4.75	1	0.0380 +or- 0.0080	0.0145 +or- 0.0072	m, e	
+DP Tau A	M0.5	1	<0.0100	<0.0038	m, e	
+DP Tau B	M2 +or- 1.5	est	<0.0100	<0.0038	m, e	
+GO Tau	M0	1	0.1624 +or- 0.0123	0.0532 +or- 0.0028	m, m	
+CIDA 14	M5	1	<0.0018	<0.0045	e, m	
+IRAS 04414+2506	M7.25	1	0.0116 +or- 0.0013	0.0049 +or- 0.0004	m, m	
+IRAS 04429+1550	M2.5	1	0.1332 +or- 0.0600	0.0510 +or- 0.0020	e, m	
+DQ Tau AB	M0, M0	14, 14	0.2107 +or- 0.0188	0.0693 +or- 0.0047	m, m	
+Haro 6-37 A	K7	1	<0.0150	<0.0057	m, e	
+Haro 6-37 B	M4 +or- 3	est	<0.0150	<0.0057	m, e	
+Haro 6-37 C	M1	1	0.2180 +or- 0.0060	0.0835 +or- 0.0375	m, e	
+DR Tau	K5	1	0.3149 +or- 0.0232	0.1152 +or- 0.0069	m, m	
+DS Tau	K5	1	0.0405 +or- 0.0069	0.0165 +or- 0.0018	m, m	
+UY Aur A	M0	2	0.0390 +or- 0.0030	0.0149 +or- 0.0068	m, e	
+UY Aur B	M2.5	2	0.0100 +or- 0.0030	0.0038 +or- 0.0021	m, e	
+St 34 AB	M3, M3	15, 15	<0.0110	<0.0042	m, e	
+St 34 C	M5.5	16	<0.0110	<0.0042	m, e	
+GM Aur	K3	7	0.5466 +or- 0.0358	0.1732 +or- 0.0068	m, m	
+J04554535+3019389	M4.75	1	<0.0133	<0.0051	e, m	
+AB Aur	A0.5 +or- 1.5	1, 17	0.3087 +or- 0.0224	0.0933 +or- 0.0051	m, m	
+J04554801+3028050	M5.5	1	<0.0230	<0.0088	m, e	
+J04554969+3019400	M6	1	<0.0071	<0.0027	e, m	
+XEST 26-062	M4	1	0.0238 +or- 0.0114	0.0091 +or- 0.0015	e, m	
+SU Aur	G8 +or- 2	18	0.0710 +or- 0.0086	0.0274 +or- 0.0025	m, e	
+XEST 26-071	M3.5	1	<0.0149	<0.0057	e, m	
+MWC 480	A4.5 +or- 2	1, 19	0.7506 +or- 0.0427	0.2566 +or- 0.0093	m, m	
+V836 Tau	K7	1	0.0673 +or- 0.0080	0.0291 +or- 0.0024	m, m	
+CIDA 8	M3.5	1	0.0263 +or- 0.0049	0.0077 +or- 0.0016	m, m	
+CIDA 9 A	K8	1	0.0770 +or- 0.0030	0.0295 +or- 0.0133	m, e	
+CIDA 9 B	M1.5 +or- 2	est	<0.0070	<0.0027	m, e	
+CIDA 11 A	M3.5	1	<0.0080	<0.0031	m, e	
+CIDA 11 B	M4.5 +or- 1.5	est	<0.0080	<0.0031	m, e	
+RW Aur A	K2.5	20	0.0560 +or- 0.0078	0.0272 +or- 0.0022	m, m	
+RW Aur B	K5	8	0.0132 +or- 0.0029	0.0044 +or- 0.0008	m, m	
+CIDA 12	M4	1	<0.0070	<0.0027	m, e	
+Notes.
+a Unless otherwise specified, the assumed spectral type uncertainty is +or-1 subclass.
+b The spectral classifications were collated from the following references: (1) Luhman et al. 2010; (2) Hartigan & Kenyon 2003; (3) Hernandez et al. 2004; (4) Furlan et al. 2011; (5) White & Ghez 2001; (6) Itoh et al. 2005; (7) Espaillat et al. 2010; (8) Duchecircne et al. 1999; (9) Kraus & Hillenbrand 2009; (10) White et al. 1999; (11) Prato et al. 2002; (12) Schaefer et al. 2012; (13) Hartigan et al. 1994; (14) Mathieu et al. 1997; (15) White & Hillenbrand 2005; (16) Dahm & Lyke 2011; (17) Roberge et al. 2001; (18) Massarotti et al. 2005; (19) Mora et al. 2001; (20) Gahm et al. 2008. The "est" flag means that the classification was crudely estimated based on the type of its primary companion and optical/near-infrared contrast ratios: more details on this modification to the classification process are available in Appendix B. The classifications for FT Tau, ITG 1, and IRAS 04370+2559 are unknown: we adopt the wide spectral type bins advocated by Luhman et al. (2010), listed here in parenthesis.
+c Upper limits are listed at the 3sigma level.
+d The "m" and "e" flags denote whether each source has a flux density measurement available at (or near) 0.89 and 1.3 mm: "m" implies direct measurement and "e" implies an extrapolation as described in the text. Notes in parenthesis indicate unresolved multiple systems where composite measurements were applied to the primaries, and upper limits to the secondaries (see Section 3.1).
+e The companions V807 Tau B (itself a binary) and V710 Tau B have no observational disk signatures, and are therefore excluded from this Class II sample. The V807 Tau system has no resolved mm-wave measurement, but we associate all of the composite emission with the primary component. Harris et al. (2012) found no mm-wave emission associated with V710 Tau B.

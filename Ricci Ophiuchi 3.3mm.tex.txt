@@ -1,0 +1,42 @@
+\begin{table}%T1
+\caption{\label{tab:obs}\label{tab1}Summary of the 3.3~mm ATCA observations. } 
+\small%%\centering
+\par
+\begin{tabular}{lccrrccc}
+\hline \hline\noalign{\smallskip} 
+Object  & $\alpha$ & $\delta$ & $F_{\nu}$ & rms   & Comments\tablefootmark{b} & Ref. & Other names \\
+        &  (J2000) & (J2000)  & (mJy)     & (mJy) &   &    &  \\
+\hline
+AS 205A  & 16:11:31.4    & $-$18:38:26.0 & 27.2  & 1.2 & triple (1.5$''$, sb) & 1 & HBC 254   \\
+SR 4     & 16:25:56.1    & $-$24:20:48.3 & 4.4   & 0.4 &   & & AS 206   \\
+GSS 26   & 16:26:10.3    & $-$24:20:54.9 & 24.2  & 0.9 &   & &       \\
+EL 20    & 16:26:18.9    & $-$24:28:20.2 & 7.3   & 0.5 &   & & VSSG 1     \\
+LFAM 1   & 16:26:21.7    & $-$24:22:50.8 & 17.5  & 0.6 & flat spectrum  & 2 &            \\
+DoAr 24E & 16:26:23.4    & $-$24:21:00.7 & 8.3   & 0.4 & binary (2.0$''$) & 1 &  GSS 31     \\
+DoAr 25  & 16:26:23.7    & $-$24:43:14.1 & 25.0  & 0.6 &   & & WSB 29   \\
+EL 24    & 16:26:24.1    & $-$24:16:14.0 & 48.8  & 0.7 &   & & WSB 31   \\
+EL 27    & 16:26:45.0    & $-$24:23:08.2 & 38.7  & 0.6 &   & & GSS 39   \\
+WL 18    & 16:26:49.0    & $-$24:38:25.7 & 3.1   & 0.5 & binary (3.6$''$) & 3 &  GY 129    \\
+SR 24S   & 16:26:58.5    & $-$24:45:37.1 & 26.6  & 0.8 & flat spectrum, triple (5.2$''$, 0.2$''$) & 2, 4, 5  &  HBC 262   \\
+SR 21    & 16:27:10.2    & $-$24:19:12.9 & 4.2   & 0.4 &  & &  EL 30     \\
+IRS 33   & 16:27:14.5    & $-$24:26:46.1 & <1.2  & 0.4 & & & GY 236    \\
+IRS 41   & 16:27:19.3    & $-$24:28:44.4 & 6.2   & 1.2 &  & &  WL 3     \\
+CRBR 85  & 16:27:24.7    & $-$24:41:03.2 & 1.5   & 0.3 & envelope  & 6 &          \\
+YLW 16c  & 16:27:26.5    & $-$24:39:23.4 & 6.5   & 0.4 &   & & GY 262   \\
+GY 284   & 16:27:30.8    & $-$24:24:56.0 & <1.2  & 0.4 & & &            \\ 
+IRS 49   & 16:27:38.3    & $-$24:36:58.8 & 4.4   & 0.4 &   & & GY 308    \\
+DoAr 33  & 16:27:39.0    & $-$23:58:19.1 & 3.7   & 0.3 &   & & WSB 53    \\
+WSB 52   & 16:27:39.5    & $-$24:39:15.9 & 10.2  & 0.5 &   & & GY 314    \\
+IRS 51   & 16:27:39.8    & $-$24:43:15.0 & 12.7  & 0.8 & binary (1.6$''$) & 3 &  GY 315     \\
+WSB 60   & 16:28:16.5    & $-$24:36:58.0 & 15.3  & 0.5 &   & & YLW 58   \\
+SR 13    & 16:28:45.3    & $-$24:28:19.2 & 10.0  & 0.6 & binary (0.4$''$) & 3 &  HBC 266   \\
+DoAr 44  & 16:31:33.5    & $-$24:27:37.7 & 10.4  & 0.5 &   & & HBC 268   \\
+RNO 90   & 16:34:09.2    & $-$15:48:16.9 & 7.6   & 0.5 &   & & HBC 649   \\
+Wa Oph 6 & 16:48:45.6    & $-$14:16:36.0 & 10.3  & 0.4 &   & & HBC 653   \\
+AS 209   & 16:49:15.3    & $-$14:22:08.6 & 17.5  & 0.5 &   & & HBC 270  \\ 
+\hline
+\end{tabular}
+\tablefoot{\tablefoottext{a}{For this undetected source the ($\alpha$,$\delta$) coordinates are from 2MASS (Cutri et~al.~\cite{Cut03}).}\\
+\tablefoottext{b}{Reason why the source has not been considered in the analysis (see Sect.~\ref{sec:selection_criteria}); enclosed in parenthesis there are the angular separation(s) between the stellar companions (``sb''$=$ spectroscopic companion).}
+\tablebib{(1)~McCabe et~al.~(\cite{McC06}); (2)~Andrews \& Williams~(\cite{And07a}); (3)~Ratzka et~al.~(\cite{Rat05}); (4)~Reipurth \& Zinnecker~(\cite{Rei93}); (5)~Simon et~al.~(\cite{Sim95}); (6)~McClure et~al.~(\cite{McC10}).}}  
+\end{table}

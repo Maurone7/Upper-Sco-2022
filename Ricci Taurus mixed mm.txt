@@ -1,0 +1,33 @@
+\begin{table}%t1
+\caption{\label{tab:obs}Summary of the new PdBI observations. } 
+%\centering
+ \begin{tabular}{lrrrrrrr}
+\hline \hline\noalign{\smallskip}
+Object  & $\alpha$ (J2000)  & $\delta$ (J2000) &   $\nu$   & $\lambda$ & $F_{\nu}$ & rms   & Comments\tablefootmark{1}   \\
+&  & &   (GHz)   &  (mm)     &   (mJy)       & (mJy) & \\
+\hline
+CW Tau  &  04:14:17.0     &   28:10:56.51 &  84.2  &  3.57 & 3.44  & 0.31 &   \\
+CX Tau  &  04:14:47.8     &   26:48:11.16 &  86.2  &  3.49 & 1.01  & 0.13 &   \\
+DE Tau  &  04:21:55.6     &   27:55:05.55 &  92.6  &  3.23 & 3.32  & 0.25 &  \\
+DK Tau  &  04:30:44.3     &   26:01:23.96 &  84.2  &  3.57 & 4.70  & 0.20 & $2.5''$ binary  \\
+DO Tau  &  04:38:28.6     &   26:10:49.76 &  84.2  &  3.57 & 13.80 & 0.29 &  \\
+DP Tau  &  04:42:37.7     &   25:15:37.56 &  84.2  &  3.57 & <0.78 & 0.26 & no sub-mm info  \\
+DR Tau  &  04:47:06.2     &   16:58:43.05 &  100.8 &  2.97 & 13.90 & 0.47 &   \\
+DS Tau  &  04:47:48.6     &   29:25:10.96 &  100.8 &  2.97 & 2.96  & 0.21 &  \\
+FM Tau  &  04:14:13.5     &   28:12:48.84 &  100.8 &  2.97 & 2.65  & 0.24 &  \\
+FP Tau  &  04:14:47.4     &   26:46:26.65 &  100.8 &  2.97 & 11.80 & 0.26 & no sub-mm info  \\
+FY Tau  &  04:32:30.5     &   24:19:56.69 &  100.8 &  2.97 & 1.90  & 0.28 & no sub-mm info  \\
+FZ Tau  &  04:32:31.8     &   24:20:02.53 &  100.8 &  2.97 & 2.89  & 0.24 &   \\
+GK Tau  &  04:33:34.6     &   24:21:06.07 &  100.8 &  2.97 & <0.96 & 0.32 & $2.5''$ binary  \\
+GO Tau  &  04:43:03.1     &   25:20:17.38 &  86.2  &  3.49 & 4.05  & 0.34 &  \\
+Haro 6-28 & 04:35:56.9    &   22:54:36.63 &  87.0  &  3.45 & 0.92  & 0.18 & $0.7''$ binary  \\
+HL Tau  &  04:31:38.4     &   18:13:57.37 &  84.5  &  3.53 & 43.40 & 0.68 & flat spectrum  \\
+HO Tau  &  04:35:20.2     &   22:32:13.98 &  87.0  &  3.45 & 2.03  & 0.53 &  \\
+LkHa 358 & 04:31:36.2     &   18:13:43.20 &  84.5  &  3.53 & 2.46  & 0.22 & no sub-mm info  \\
+SU Aur  &  04:55:59.4     &   30:34:10.39 &  84.5  &  3.53 & 2.88  & 0.19 &
+ \\
+\hline
+\end{tabular}
+\tablefoot{\tablefoottext{1}{Reason why the source has not been considered in the analysis (see text for more details).}}
+%\vspace*{2.5mm}
+\end{table}

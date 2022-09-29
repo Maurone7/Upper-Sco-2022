@@ -1,0 +1,71 @@
+Region         Source               Wavelength  Flux        Wavelength    Flux    \alpha
+-------------  -----------------  ------------  --------  ------------  ------  --------
+Lupus          Sz65                       0.87  29.94              3.1    5.45      2.01
+Lupus          Sz66                       0.87  6.42               3.1    1.21      1.97
+Lupus          J15450634-3417378          0.87  6.18               3.1    1.03      2.12
+Lupus          J15450887-3417333          0.87  20.7               3.1    3.86      1.98
+Lupus          Sz68                       0.87  66.38              3.1   13.74      1.86
+Lupus          Sz69                       0.87  8.05               3.1    1.64      1.88
+Lupus          Sz71                       0.87  69.15              3.1    9.82      2.31
+Lupus          Sz72                       0.87  5.54               3.1    0.95      2.08
+Lupus          Sz73                       0.87  10.84              3.1    1.97      2.01
+Lupus          Sz74                       0.87  8.2                3.1    2.55      1.38
+Lupus          Sz75                       0.87  34.1               3.1    4.6       2.37
+Lupus          Sz82                       0.87  205.0              3.1   20.45      2.72
+Lupus          Sz83                       0.87  166.9              3.1   22.74      2.36
+Lupus          Sz84                       0.87  12.63              3.1    1.59      2.45
+Lupus          Sz129                      0.87  75.9               3.1    9.9       2.41
+Lupus          J16000236-4222145          0.87  49.96              3.1    6.83      2.35
+Lupus          J16011549-4152351          0.87  21.76              3.1    2.57      2.53
+Lupus          Sz133                      0.87  27.02              3.1    3.96      2.27
+Lupus          J16070854-3914075          0.87  34.77              3.1    5.26      2.23
+Lupus          Sz90                       0.87  8.74               3.1    1.17      2.37
+Lupus          Sz98                       0.87  103.35             3.1   12.73      2.47
+Lupus          Sz100                      0.87  21.71              3.1    3.23      2.25
+Lupus          J16083070-3828268          0.87  38.76              3.1    4.77      2.48
+Lupus          Sz108B                     0.87  11.88              3.1    1.75      2.26
+Lupus          Sz110                      0.87  7.37               3.1    1.32      2.03
+Lupus          J16085324-3914401          0.87  7.98               3.1    1.49      1.99
+Lupus          Sz111                      0.87  60.29              3.1    5.83      2.76
+Lupus          Sz113                      0.87  10.46              3.1    2.07      1.92
+Lupus          Sz114                      0.87  41.45              3.1    5.6       2.37
+Lupus          Sz118                      0.87  23.45              3.1    3.11      2.39
+Lupus          J16124373-3815031          0.87  11.77              3.1    1.84      2.19
+Taurus-Auriga  AA Tau                     1     AA Tau           108      0.22      2
+Taurus-Auriga  CI Tau                     1     CI Tau           314      0.16      2.5
+Taurus-Auriga  CW Tau                     1     CW Tau           129      0.16      2.5
+Taurus-Auriga  CX Tau                     1     CX Tau            19      0.18      2.3
+Taurus-Auriga  CY Tau                     1     CY Tau           168      0.2       2.2
+Taurus-Auriga  DE Tau                     1     DE Tau            69      0.16      2.5
+Taurus-Auriga  DL Tau                     1     DL Tau           313      0.17      2.4
+Taurus-Auriga  DM Tau                     1     DM Tau           209      0.16      2.5
+Taurus-Auriga  DN Tau                     1     DN Tau           153      0.18      2.3
+Taurus-Auriga  DO Tau                     1     DO Tau           220      0.2       2.2
+Taurus-Auriga  DR Tau                     1     DR Tau           298      0.14      2.7
+Taurus-Auriga  DS Tau                     1     DS Tau            28      0.22      2
+Taurus-Auriga  FM Tau                     1     FM Tau            29      0.24      1.9
+Taurus-Auriga  FZ Tau                     1     FZ Tau            27      0.21      2.1
+Taurus-Auriga  GM Aur                     1     GM Aur           423      0.15      2.6
+Taurus-Auriga  GO Tau                     1     GO Tau           151      0.15      2.6
+Taurus-Auriga  HO Tau                     1     HO Tau            36      0.21      2.1
+Taurus-Auriga  IQ Tau                     1     IQ Tau           118      0.2       2.2
+Taurus-Auriga  RY Tau                     1     RY Tau           383      0.18      2.3
+Taurus-Auriga  SU Aur                     1     SU Aur            50      0.21      2.1
+Taurus-Auriga  UZ Tau E                   1     UZ Tau E         333      0.16      2.5
+Ophiucus       SR 4                       1     79                 3      5.07      2.5
+Ophiucus       GSS 26                     1     215                3     26.66      1.9
+Ophiucus       EL 20                      1     151                3      9.69      2.5
+Ophiucus       DoAr 25                    1     405                3     32.37      2.3
+Ophiucus       EL 24                      1     664                3     59.22      2.2
+Ophiucus       EL 27                      1     564                3     50.31      2.2
+Ophiucus       SR 21                      1     220                3      9.09      2.9
+Ophiucus       IRS 41                     1     84                 3      8.36      2.1
+Ophiucus       YLW 16C                    1     123                3      8.81      2.4
+Ophiucus       IRS 49                     1     40                 3      5.54      1.8
+Ophiucus       DoAr 33                    1     64                 3      5.71      2.2
+Ophiucus       WSB 52                     1     88                 3     12.18      1.8
+Ophiucus       WSB 60                     1     156                3     19.35      1.9
+Ophiucus       DoAr 44                    1     168                3     14.98      2.2
+Ophiucus       RNO 90                     1     111                3      8.87      2.3
+Ophiucus       Wa Oph 60                  1     250                3     17.9       2.4
+Ophiucus       AS 209                     1     441                3     31.58      2.4
