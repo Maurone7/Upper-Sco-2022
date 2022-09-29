@@ -297,4 +297,6 @@ source_list_ophiucus_ricci_1mm = ['SR 4', 'GSS 26', 'EL 20', 'DoAr 25', 'EL 24',
 spectral_index_ophiucus = [2.5, 1.9, 2.5, 2.3, 2.2, 2.2, 2.9, 2.1, 2.4, 1.8, 2.2, 1.8, 1.9, 2.2, 2.3, 2.4, 2.4]
 flux_list_ophiucus_ricci_1mm = [79, 215, 151, 405, 664, 564, 220, 84, 123, 40, 64, 88, 156, 168, 111, 250, 441]
 
-print(spectral_indices_taurus)
+
+
+
