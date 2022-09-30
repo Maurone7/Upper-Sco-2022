@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -30,12 +31,20 @@
 					"name" : "untitled",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
 			"targets" : 
 			[
+				{
+					"directoryIndex" : 0,
+					"id" : "data_file.c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-data_file.c-Debug-5bac7e63225d4bbb835d.json",
+					"name" : "data_file.c",
+					"projectIndex" : 0
+				},
 				{
 					"directoryIndex" : 0,
 					"id" : "untitled::@6890427a1f51a3e7e1df",
@@ -49,8 +58,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/mauro/Dropbox/PyCharm/Coding project/cmake-build-debug",
-		"source" : "/Users/mauro/Dropbox/PyCharm/Coding project"
+		"build" : "/Users/mauro/Dropbox/GitHub/Upper-Sco-2022/cmake-build-debug",
+		"source" : "/Users/mauro/Dropbox/GitHub/Upper-Sco-2022"
 	},
 	"version" : 
 	{

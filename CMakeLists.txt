@@ -4,3 +4,4 @@ project(untitled C)
 set(CMAKE_C_STANDARD 99)
 
 add_executable(untitled main.c)
+add_executable(data_file.c main.c)
