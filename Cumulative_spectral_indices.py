@@ -1,8 +1,9 @@
 from data_file import tazzari_lupus_flux, tazzari_lupus_flux_error, tazzari_lupus_sources, source_ansdell_lupus, \
     flux_ansdell_1_33mm_lupus, flux_ansdell_1_33mm_error_lupus, ricci_taurus_sources_1mm, flux_barenfeld_0_88mm_updated,\
     flux_list_ophiucus_ricci_1mm, source_list_ophiucus_ricci_1mm, ricci_ophiuchi_flux_3_3mm, \
-    source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus
-from Histogram_spectral_index import spectra_index, spectral_index_upper_sco
+    source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus, tazzari_lupus_spectral_indices
+from Histogram_spectral_index import spectral_index_upper_sco
+
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -30,11 +31,6 @@ for index_andsell, element_andsell in enumerate(source_ansdell_lupus):
             flux_matching_TAZZARI_andsell_error_lupus.append(tazzari_lupus_flux_error[index_tazzari])
             flux_matching_tazzari_ANDSELL_lupus.append(flux_ansdell_1_33mm_lupus[index_andsell])
             flux_matching_tazzari_ANDSELL_error_lupus.append(flux_ansdell_1_33mm_error_lupus[index_andsell])
-
-spectral_index_lupus = []
-for x in range(len(sources_matching_tazzari_andsell_lupus)):
-    spectral_index_lupus.append(spectra_index(flux_matching_tazzari_ANDSELL_lupus[x], flux_matching_TAZZARI_andsell_lupus[x], 10 ** 10 / 0.133, 10 ** 10 / 0.31))
-
 
 #matching_sources_ricci_taurus_3mm_1mm = []
 #matching_fluxes_ricci_taurus_3MM_1mm = []
@@ -93,18 +89,19 @@ while minimum < np.max(spectral_indices_taurus) + 0.3:
 count_list_taurus = [x / 11 for x in count_list_taurus]
 
 count_list_lupus = []
-steps = (np.max(spectral_index_lupus) - np.min(spectral_index_lupus))/100
-minimum = np.min(spectral_index_lupus) - 0.3
-while minimum < np.max(spectral_index_lupus) + 0.3:
+steps = (np.max(tazzari_lupus_spectral_indices) - np.min(tazzari_lupus_spectral_indices))/100
+minimum = np.min(tazzari_lupus_spectral_indices) - 0.3
+while minimum < np.max(tazzari_lupus_spectral_indices) + 0.3:
     count = 0
-    for elements in spectral_index_lupus:
+    for elements in tazzari_lupus_spectral_indices:
         if elements <= minimum:
             count += 1
 
     count_list_lupus.append(count)
     minimum += steps
 
-count_list_lupus = [x /len(spectral_index_lupus) for x in count_list_lupus]
+count_list_lupus = [x /len(tazzari_lupus_spectral_indices) for x in count_list_lupus]
+
 
 count_list_ophiucus = []
 steps = (np.max(spectral_index_ophiucus) - np.min(spectral_index_ophiucus)) / 100
@@ -120,8 +117,9 @@ while minimum < np.max(spectral_index_ophiucus) + 0.3:
 
 count_list_ophiucus = [x / len(spectral_index_ophiucus) for x in count_list_ophiucus]
 
+
 plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus',)
-plt.scatter(flux_matching_tazzari_ANDSELL_lupus, spectral_index_lupus, label='Lupus', marker='^', color='black')
+plt.scatter(tazzari_lupus_sources, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
 plt.scatter(ricci_taurus_sources_1mm, spectral_indices_taurus, label='Taurus', marker='s')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
@@ -132,7 +130,7 @@ plt.savefig('Spectral index vs flux_1mm')
 plt.show()
 
 x_ophiucus = np.linspace(np.min(spectral_index_ophiucus) - 0.3, np.max(spectral_index_ophiucus) + 0.3, len(count_list_ophiucus))
-x_lupus = np.linspace(np.min(spectral_index_lupus) - 0.3, np.max(spectral_index_lupus) + 0.3, len(count_list_lupus))
+x_lupus = np.linspace(np.min(tazzari_lupus_spectral_indices) - 0.3, np.max(tazzari_lupus_spectral_indices) + 0.3, len(count_list_lupus))
 x_taurus = np.linspace(np.min(spectral_indices_taurus) - 0.3, np.max(spectral_indices_taurus) + 0.3, len(count_list_taurus))
 x_sco = np.linspace(np.min(spectral_index_upper_sco) - 0.3, np.max(spectral_index_upper_sco) + 0.3, len(count_list_sco))
 
@@ -149,6 +147,7 @@ plt.step(x_ophiucus, count_list_ophiucus, label='Ophiucus')
 plt.step(x_taurus, count_list_taurus, label='Taurus-Auriga')
 plt.step(x_lupus, count_list_lupus, label='Lupus')
 plt.step(x_sco, count_list_sco, label='Upper Sco')
+
 
 plt.ylim(0,1)
 plt.legend()

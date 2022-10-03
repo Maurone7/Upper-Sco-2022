@@ -143,26 +143,30 @@ flux_ansdell_1_33mm_lupus = [float(x.strip()) for x in flux_ansdell_1_33mm_lupus
 tazzari_lupus_sources = []
 tazzari_lupus_flux = []
 tazzari_lupus_flux_error = []
+tazzari_lupus_spectral_indices = []
+
 with open('Tazzari 2021 2.7mm.txt') as f:
     lines = f.readlines()[12:]
     for x in lines:
         tazzari_lupus_sources.append(x[0:20])
         tazzari_lupus_flux.append(x[79:90])
         tazzari_lupus_flux_error.append(x[90:101])
+        tazzari_lupus_spectral_indices.append(x[123:132])
+
 
 # remove white spaces at both ends
 # ex ' Sz 65 ' becomes 'Sz 65'
 tazzari_lupus_sources = [x.strip() for x in tazzari_lupus_sources]
 tazzari_lupus_flux = [x.strip() for x in tazzari_lupus_flux]
 tazzari_lupus_flux_error = [float(x.strip()) for x in tazzari_lupus_flux_error]
+tazzari_lupus_sources.remove('Sz 91')
+tazzari_lupus_spectral_indices.remove('      nan')
+tazzari_lupus_spectral_indices = [float(x.strip()) for x in tazzari_lupus_spectral_indices]
+
 
 # one flux for a star is missing, so pop all the data from that line
 tazzari_lupus_flux = [float(x) if x != 'nan' else 0 for x in tazzari_lupus_flux]
-for index, element in enumerate(tazzari_lupus_flux):
-    if element == 0:
-        tazzari_lupus_sources.pop(index)
-        tazzari_lupus_flux.pop(index)
-        tazzari_lupus_flux_error.pop(index)
+
 
 # remove white spaces in the middle of the name
 # ex. 'Sz 65' becomes 'Sz65'
@@ -288,9 +292,6 @@ with open('apjaa97e2t4_ascii.txt') as f:
 
 fluxes_ophiucus_cox_0_87mm = [x[0:4] if "or" in x else x for x in fluxes_ophiucus_cox_0_87mm]
 indices_to_pop = [fluxes_ophiucus_cox_0_87mm.index(x) for x in fluxes_ophiucus_cox_0_87mm if x[0] == '<']
-sources_to_pop = []
-sources_to_pop = [sources_ophiucus_cox[x] for x in indices_to_pop]
-fluxes_ophiucus_cox_0_87mm = [x for x in fluxes_ophiucus_cox_0_87mm if x[0] != '<']
 
 
 source_list_ophiucus_ricci_1mm = ['SR 4', 'GSS 26', 'EL 20', 'DoAr 25', 'EL 24', 'EL 27', 'SR 21', 'IRS 41', ' YLW 16C', 'IRS 49', 'DoAr 33', 'WSB 52', 'WSB 60', 'DoAr 44', 'RNO 90', 'Wa Oph 60', 'AS 209']
