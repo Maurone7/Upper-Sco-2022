@@ -2,7 +2,7 @@ from data_file import temperature_list_barenfeld_error, temperature_list_barenfe
     source_list_barenfeld_2016, spectral_type_barenfeld, source_list_garrett
 from Interpolation import masses_new, masses_new_upper_error, masses_new_lower_error
 from Parallaxes import luminosity_106, distances_106, distances_upper_error_106, distances_lower_error_106, \
-    new_luminosity_error_log
+    lower_new_luminosity_error_log, upper_new_luminosity_error_log
 
 from tabulate import tabulate
 
@@ -19,8 +19,8 @@ for x in range(len(source_list_barenfeld_2016)):
     table.append([source_list_barenfeld_2016[x], spectral_type_barenfeld[x], str(temperature_list_barenfeld[x]) + '\pm' +
                   str(temperature_list_barenfeld_error[x]), str(round(distances_106[x], 2)) + '(' +
                   str(round(distances_lower_error_106[x], 2)) + ',+' + str(round(distances_upper_error_106[x], 2)) + ')',
-                  str(round(luminosity_106[x], 3)) + '(' + str(round(new_luminosity_error_log[x], 3)) + ',-' +
-                  str(round(new_luminosity_error_log[x], 3)) + ')', str(round(masses_new[x], 2)) + '(' +
+                  str(round(luminosity_106[x], 3)) + '(' + str(round(upper_new_luminosity_error_log[x], 3)) + ',-' +
+                  str(round(lower_new_luminosity_error_log[x], 3)) + ')', str(round(masses_new[x], 2)) + '(' +
                   str(round(masses_new_upper_error[x], 2)) + ',-'
                   + str(round(masses_new_lower_error[x], 2)) + ')'])
 

@@ -145,12 +145,15 @@ for index, element in enumerate(luminosity_list_barenfeld_NOT_log):
 
 
 
-new_luminosity_error_log = []
-new_luminosity_error_NOT_log = []
+lower_new_luminosity_error_log = []
+upper_new_luminosity_error_log = []
+lower_new_luminosity_error_NOT_log = []
+upper_new_luminosity_error_NOT_log = []
 for index, element in enumerate(luminosity_list_barenfeld_NOT_log):
-    new_luminosity_error_NOT_log.append(update_new_luminosity_error(distances_106[index], distances_lower_error_106[index], element, luminosity_updated_old_error_NOT_log[index]))
-    new_luminosity_error_log.append(np.log10(new_luminosity_error_NOT_log[index] + luminosity_list_barenfeld_NOT_log[index]) - np.log10(luminosity_list_barenfeld_NOT_log[index]))
-
+    lower_new_luminosity_error_NOT_log.append(update_new_luminosity_error(distances_106[index], distances_lower_error_106[index], element, luminosity_updated_old_error_NOT_log[index]))
+    upper_new_luminosity_error_NOT_log.append(update_new_luminosity_error(distances_106[index], distances_upper_error_106[index], element, luminosity_updated_old_error_NOT_log[index]))
+    lower_new_luminosity_error_log.append(np.log10(lower_new_luminosity_error_NOT_log[index] + luminosity_list_barenfeld_NOT_log[index]) - np.log10(luminosity_list_barenfeld_NOT_log[index]))
+    upper_new_luminosity_error_log.append(np.log10(upper_new_luminosity_error_NOT_log[index] + luminosity_list_barenfeld_NOT_log[index]) - np.log10(luminosity_list_barenfeld_NOT_log[index]))
 
 #manipulate trasnparency errobars
 kwargs_errobar = {'alpha': 0.3}
@@ -159,10 +162,11 @@ kwargs_errobar = {'alpha': 0.3}
 x = [-2, 1]
 y = [-2, 1]
 
+luminosity_106 = [np.log10(x) for x in luminosity_106]
 
 plt.scatter(luminosity_list_barenfeld, luminosity_106)
 plt.errorbar(luminosity_list_barenfeld, luminosity_106, xerr=luminosity_list_barenfeld_error, ls='none', c='gray', **kwargs_errobar)
-plt.errorbar(luminosity_list_barenfeld, luminosity_106, yerr=(new_luminosity_error_log, new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
+plt.errorbar(luminosity_list_barenfeld, luminosity_106, yerr=(lower_new_luminosity_error_log, upper_new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
 plt.xlabel('$L_{Barenfeld} log(L_{\star}/L_{\odot})$', fontsize=20), plt.ylabel('$L_{new} log(L_{\star}/L_{\odot})$', fontsize=20)
 plt.grid()
 
