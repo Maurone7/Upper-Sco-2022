@@ -2,8 +2,7 @@
 # NOTE: THIS ONLY TAKES IN CONSIDERATION THE 24 DISKS IN THE SAMPLE
 
 from data_file import luminosity_list_barenfeld_updated, luminosity_list_barenfeld_error_updated
-from Table_1 import luminosity_list_patimo, luminosity_list_patimo_lower_error, luminosity_list_patimo_upper_error
-
+from Table_1 import luminosity_list_patimo, lower_new_luminosity_error_log, upper_new_luminosity_error_log
 
 import matplotlib. pyplot as plt
 fig, ax = plt.subplots()
@@ -25,11 +24,10 @@ plt.plot(x,y, c='orange')
 kwargs_errobar = {'alpha':0.3}
 
 
-# create points
+# create plots
 plt.scatter(luminosity_list_barenfeld_updated, luminosity_list_patimo)
 plt.errorbar(luminosity_list_barenfeld_updated, luminosity_list_patimo, xerr=luminosity_list_barenfeld_error_updated, ls='none', **kwargs_errobar)
-# plt.errorbar(luminosity_list_barenfeld_updated, luminosity_list_patimo, yerr=(luminosity_list_patimo_upper_error, luminosity_list_patimo_lower_error), ls='none', c='blue', **kwargs_errobar)
-
+#plt.errorbar(luminosity_list_barenfeld_updated, luminosity_list_patimo, yerr=(lower_new_luminosity_error_log, upper_new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
 plt.xlabel('$L_{Barenfeld} log(L_{\star}/L_{\odot})$', fontsize=20), plt.ylabel('$L_{new} log(L_{\star}/L_{\odot})$', fontsize=20)
 plt.grid()
 ax.tick_params(which='both', labelsize=15)

@@ -5,7 +5,7 @@ import numpy as np
 from scipy.interpolate import interp1d
 
 # import updated values (luminosities and temperatures) for all the 106 stars in the sample
-from Parallaxes import luminosity_106, temperature_list_barenfeld, luminosity_lower_error_1, luminosity_upper_error_1, temperature_list_barenfeld_error_values
+from Parallaxes import luminosity_106, temperature_list_barenfeld, lower_new_luminosity_error_log, upper_new_luminosity_error_log, temperature_list_barenfeld_error_values
 # import values from Feiden's models
 from Feiden_automatic import temperature_column_10Myr, luminosity_column_10Myr, temperature_column_20Myr,\
     luminosity_column_20Myr, temperature_column_5Myr, luminosity_column_5Myr
@@ -24,7 +24,7 @@ kwargs_errobar = {'alpha': 0.3}
 
 #scatter all points from Feiden
 plt.scatter(temperature_list_barenfeld, luminosity_106)
-plt.errorbar(temperature_list_barenfeld, luminosity_106, yerr=(luminosity_upper_error_1, luminosity_lower_error_1), ls='none', c='gray', **kwargs_errobar)
+plt.errorbar(temperature_list_barenfeld, luminosity_106, yerr=(upper_new_luminosity_error_log, lower_new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
 plt.errorbar(temperature_list_barenfeld, luminosity_106, xerr=temperature_list_barenfeld_error_values, ls='none', c='gray', **kwargs_errobar)
 
 #interpolate 5Myr
