@@ -1,12 +1,15 @@
 from data_file import tazzari_lupus_flux, tazzari_lupus_flux_error, tazzari_lupus_sources, source_ansdell_lupus, \
-    flux_ansdell_1_33mm_lupus, flux_ansdell_1_33mm_error_lupus, ricci_taurus_sources_1mm, flux_barenfeld_0_88mm_updated,\
+    flux_ansdell_1_33mm_lupus, flux_ansdell_1_33mm_error_lupus, flux_barenfeld_0_88mm_updated,\
     flux_list_ophiucus_ricci_1mm, source_list_ophiucus_ricci_1mm, ricci_ophiuchi_flux_3_3mm, \
-    source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus, tazzari_lupus_spectral_indices
+    source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus, tazzari_lupus_spectral_indices,\
+    ricci_taurus_fluxes_1mm, flux_ansdell_1_33mm_lupus
 from Histogram_spectral_index import spectral_index_upper_sco
 
 
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.stats import kstest
+
 fig, ax = plt.subplots()
 
 # set thickness axis
@@ -117,10 +120,10 @@ while minimum < np.max(spectral_index_ophiucus) + 0.3:
 
 count_list_ophiucus = [x / len(spectral_index_ophiucus) for x in count_list_ophiucus]
 
-
+print(tazzari_lupus_sources)
 plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus',)
-plt.scatter(tazzari_lupus_sources, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
-plt.scatter(ricci_taurus_sources_1mm, spectral_indices_taurus, label='Taurus', marker='s')
+#plt.scatter(tazzari_lupus_sources, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
+plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.xscale('log')
@@ -154,4 +157,9 @@ plt.legend()
 plt.xlabel(r'$\alpha$', fontsize=20), plt.ylabel('Cumulative fraction', fontsize=20)
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Cumulative Spectra Indices')
-plt.show()
+#plt.show()
+
+print("Upper_sco, Ophiucus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
+print("Upper_sco, Taurus", kstest(spectral_index_upper_sco, spectral_indices_taurus))
+print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, tazzari_lupus_spectral_indices))
+print("Upper_sco, Lupus", kstest(spectral_index_upper_sco,spectral_index_ophiucus + spectral_indices_taurus + tazzari_lupus_spectral_indices))

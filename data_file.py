@@ -91,6 +91,8 @@ for x in range(len(source_list_barenfeld_2016)):
             temperature_list_barenfeld_updated.append(temperature_list_barenfeld[x])
             temperature_list_barenfeld_error_updated.append(temperature_list_barenfeld_error[x])
 
+
+
 flux_barenfeld_0_88mm = []
 flux_barenfeld_0_88_error = []
 interpolation_function = open('Barenfeld Table 4.txt', 'r')
@@ -278,9 +280,12 @@ with open('Ricci Taurus 1mm.txt') as f:
         ricci_taurus_fluxes_1mm.append(x.split('&')[2])
         spectral_indices_taurus.append(x.split('&')[3])
 
+print(ricci_taurus_sources_1mm, ricci_taurus_fluxes_1mm)
 ricci_taurus_fluxes_1mm = [float(x.strip()) for x in ricci_taurus_fluxes_1mm]
 ricci_taurus_sources_1mm = [x.strip() for x in ricci_taurus_sources_1mm]
 spectral_indices_taurus = [float(x.strip()) for x in spectral_indices_taurus]
+ricci_temperature_taurus_1mm = [4060, 4060, 4730, 3488, 3705, 3560, 4060, 3705, 3850, 3850, 4060, 4900, 3850, 3850, 4730, 3850, 3778, 3778, 5080, 5860, 3705]
+ricci_luminosity_taurus_1mm_NOT_LOG = [0.80, 1.01, 1.32, 0.48, 0.55, 1.01, 0.89, 0.24, 0.91, 0.79, 1.09, 0.90, 0.26, 1.06, 1.26, 0.27, 0.16, 0.73, 6.59, 10.6, 2.27]
 
 sources_ophiucus_cox = []
 fluxes_ophiucus_cox_0_87mm = []

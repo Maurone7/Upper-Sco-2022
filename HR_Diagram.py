@@ -32,7 +32,7 @@ plt.errorbar(temperature_list_barenfeld, luminosity_106, xerr=temperature_list_b
 f5 = interp1d(temperature_column_5Myr, luminosity_column_5Myr)
 
 #plot line 5Myr
-x = np.linspace(np.min(temperature_column_5Myr), np.max(temperature_column_5Myr))
+x = np.linspace(min(temperature_column_5Myr), max(temperature_column_5Myr))
 plt.plot(x, f5(x), c='black', label='5Myr')
 
 
@@ -58,8 +58,8 @@ plt.ylabel('Lum'), plt.xlabel('T')
 
 # invert temperature axis to create H-R diagram
 plt.gca().invert_xaxis()
-plt.xlabel("$T[K]$", fontsize=20), plt.ylabel('$L/L_{\odot}$', fontsize=20)
+plt.xlabel("$T[K]$", fontsize=20), plt.ylabel('log $L/L_{\odot}$', fontsize=20)
 ax.tick_params(which='both', labelsize=15)
 plt.legend()
 plt.savefig('H-R diagram')
-plt.show()
+#plt.show()

@@ -1,0 +1,12 @@
+{
+    "folders": [
+		{
+			"path": "../CS 50"
+		}
+	],
+    "settings": {
+        "files.associations": {
+            "cs50.h": "c"
+        }
+    }
+}

@@ -77,4 +77,5 @@ plt.errorbar(temperature_list_barenfeld, flux_barenfeld_0_88mm, xerr=temperature
 plt.ylabel(r'$F_{0.88\rm mm}$ [mJy]', fontsize=20), plt.xlabel(r'$T_{eff}\rm\ [K]$', fontsize=20)
 plt.yscale('log'), plt.xscale('log')
 ax.tick_params(which='both', labelsize=15)
-plt.savefig('Fig 1 new'), plt.show()
+plt.savefig('Fig 1 new')
+#plt.show()

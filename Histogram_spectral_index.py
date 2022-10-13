@@ -26,4 +26,4 @@ plt.ylabel('Frequency', fontsize=20), plt.xlabel(r'Spectral index $\alpha_{abs}$
 #plt.title('Frequency vs Spectral Index', fontsize=20)
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Spectral index frequency')
-plt.show()
+#plt.show()

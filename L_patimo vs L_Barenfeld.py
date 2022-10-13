@@ -18,7 +18,7 @@ x = [-2, 1]
 y = [-2, 1]
 
 # create straight line with equation y=x
-plt.plot(x,y, c='orange')
+plt.plot(x, y, c='orange')
 
 # manipulate trasnparency errobars
 kwargs_errobar = {'alpha':0.3}
@@ -31,5 +31,5 @@ plt.errorbar(luminosity_list_barenfeld_updated, luminosity_list_patimo, xerr=lum
 plt.xlabel('$L_{Barenfeld} log(L_{\star}/L_{\odot})$', fontsize=20), plt.ylabel('$L_{new} log(L_{\star}/L_{\odot})$', fontsize=20)
 plt.grid()
 ax.tick_params(which='both', labelsize=15)
-# plt.savefig('L_patimo vs L_Barenfeld')
-plt.show()
+plt.savefig('L_patimo vs L_Barenfeld')
+# plt.show()

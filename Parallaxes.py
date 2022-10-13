@@ -174,7 +174,7 @@ plt.grid()
 plt.plot(x,y, c='orange')
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('106 Luminosity updated')
-plt.show()
+#plt.show()
 
 fig, ax = plt.subplots()
 
@@ -193,4 +193,4 @@ plt.xlabel(r'$T_{eff}\rm[K]$', fontsize=20), plt.ylabel(r'$M_{\star}(M_{\odot})$
 plt.grid()
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Mass 106 Feiden')
-plt.show()
+#plt.show()
