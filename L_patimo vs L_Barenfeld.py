@@ -32,4 +32,4 @@ plt.xlabel('$L_{Barenfeld} log(L_{\star}/L_{\odot})$', fontsize=20), plt.ylabel(
 plt.grid()
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('L_patimo vs L_Barenfeld')
-# plt.show()
+plt.show()
