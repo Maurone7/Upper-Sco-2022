@@ -42,6 +42,6 @@ for x in range(len(beta_list)):
 
 # create file on notepad called 'Table 2'
 with open('Table 3.txt', 'w') as f:
-    f.write(tabulate(table, headers=['Sources', 'Temperature(K)', r'\alpha_{Planck}', r'\beta', r'\kappa_{3mm}', r'\kappa_{0.87mm}']))
+    f.write(tabulate(table, headers=['Sources', 'Temperature(K)', r'\alpha_{Planck}', r'\beta', r'\kappa_{3mm}', r'\kappa_{0.88mm}']))
 
 #print(tabulate(table, headers=['Sources', 'Temperature(K)', r'\alpha_{Planck}', r'\beta', r'\kappa_{3mm}', r'\kappa_{0.87mm}']))
