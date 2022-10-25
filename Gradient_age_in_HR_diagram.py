@@ -57,7 +57,7 @@ plt.scatter(matching_temperatures_barenfeld_garrett, spectral_index_upper_sco, c
 #plt.plot(x_5Myr, f5(x_5Myr), c='black', label='5Myr', zorder=1)
 plt.gca().invert_xaxis()
 plt.legend()
-plt.xlabel("$T[K]$", fontsize=20), plt.ylabel('log $L/L_{\odot}$', fontsize=20)
+plt.xlabel("$T[K]$", fontsize=20), plt.ylabel(r'$\alpha', fontsize=20)
 plt.show()
 
 z = np.polyfit(ricci_temperature_taurus_1mm, spectral_indices_taurus, 3)

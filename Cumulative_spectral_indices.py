@@ -1,5 +1,5 @@
 from data_file import tazzari_lupus_flux, tazzari_lupus_flux_error, tazzari_lupus_sources, source_ansdell_lupus, \
-    flux_ansdell_1_33mm_lupus, flux_ansdell_1_33mm_error_lupus, flux_barenfeld_0_88mm_updated,\
+    flux_ansdell_1_33mm_error_lupus, flux_barenfeld_0_88mm_updated,\
     flux_list_ophiucus_ricci_1mm, source_list_ophiucus_ricci_1mm, ricci_ophiuchi_flux_3_3mm, \
     source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus, tazzari_lupus_spectral_indices,\
     ricci_taurus_fluxes_1mm, flux_ansdell_1_33mm_lupus
@@ -35,21 +35,6 @@ for index_andsell, element_andsell in enumerate(source_ansdell_lupus):
             flux_matching_tazzari_ANDSELL_lupus.append(flux_ansdell_1_33mm_lupus[index_andsell])
             flux_matching_tazzari_ANDSELL_error_lupus.append(flux_ansdell_1_33mm_error_lupus[index_andsell])
 
-#matching_sources_ricci_taurus_3mm_1mm = []
-#matching_fluxes_ricci_taurus_3MM_1mm = []
-#matching_fluxes_ricci_taurus_3mm_1MM = []
-#ricci_wavelengths_3mm_updated = []
-#for index_ricci_3mm, element_ricci_3mm in enumerate(ricci_taurus_sources_3mm):
-#    for index_ricci_1mm, element_ricci_1mm in enumerate(ricci_taurus_sources_1mm):
-#        if element_ricci_1mm == element_ricci_3mm:
-#            matching_sources_ricci_taurus_3mm_1mm.append(element_ricci_3mm)
-#            matching_fluxes_ricci_taurus_3mm_1MM.append(ricci_taurus_fluxes_1mm[index_ricci_1mm])
-#            matching_fluxes_ricci_taurus_3MM_1mm.append(ricci_taurus_flux_3mm[index_ricci_3mm])
-#            ricci_wavelengths_3mm_updated.append(ricci_wavelengths_3mm[index_ricci_3mm])
-#
-#spectral_indices_taurus = []
-#for x in range(len(matching_sources_ricci_taurus_3mm_1mm)):
-#    spectral_indices_taurus.append(spectra_index(matching_fluxes_ricci_taurus_3MM_1mm[x], matching_fluxes_ricci_taurus_3mm_1MM[x], 10**11/ricci_wavelengths_3mm_updated[x], 10**11/1))
 
 matching_sources_ricci_ophiucus_3mm_1mm = []
 matching_fluxes_ricci_ophiucus_3mm_1MM = []
@@ -157,9 +142,10 @@ plt.legend()
 plt.xlabel(r'$\alpha$', fontsize=20), plt.ylabel('Cumulative fraction', fontsize=20)
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Cumulative Spectra Indices')
-#plt.show()
+plt.show()
 
 print("Upper_sco, Ophiucus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
 print("Upper_sco, Taurus", kstest(spectral_index_upper_sco, spectral_indices_taurus))
 print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, tazzari_lupus_spectral_indices))
-print("Upper_sco, Lupus", kstest(spectral_index_upper_sco,spectral_index_ophiucus + spectral_indices_taurus + tazzari_lupus_spectral_indices))
+print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, spectral_index_ophiucus + spectral_indices_taurus +
+                                 tazzari_lupus_spectral_indices))
