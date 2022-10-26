@@ -144,6 +144,7 @@ ax.tick_params(which='both', labelsize=15)
 plt.savefig('Cumulative Spectra Indices')
 plt.show()
 
+
 print("Upper_sco, Ophiucus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
 print("Upper_sco, Taurus", kstest(spectral_index_upper_sco, spectral_indices_taurus))
 print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, tazzari_lupus_spectral_indices))
