@@ -5,7 +5,6 @@ from data_file import tazzari_lupus_flux, tazzari_lupus_flux_error, tazzari_lupu
     ricci_taurus_fluxes_1mm, flux_ansdell_1_33mm_lupus
 from Histogram_spectral_index import spectral_index_upper_sco
 
-
 import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import kstest
@@ -18,6 +17,13 @@ plt.setp(ax.spines.values(), linewidth=2)
 # avoid axis labels being cut
 plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
 
+def find_flux_1_mm(spectral_index, flux_3_mm):
+    return 3**spectral_index * flux_3_mm
+
+flux_lupus_1_mm = []
+for index_flux_3_mm, element_flux_3_mm in enumerate(tazzari_lupus_spectral_indices):
+    flux_lupus_1_mm.append(find_flux_1_mm(element_flux_3_mm, tazzari_lupus_flux[index_flux_3_mm]))
+
 # capitals are used to indicate which list the elements are from
 sources_matching_tazzari_andsell_lupus = []
 # ex. when a matching source is found, the flux from Tazzari is added to flux_matching_TAZZARI_andsell
@@ -26,6 +32,7 @@ flux_matching_TAZZARI_andsell_lupus = []
 flux_matching_TAZZARI_andsell_error_lupus = []
 flux_matching_tazzari_ANDSELL_lupus = []
 flux_matching_tazzari_ANDSELL_error_lupus = []
+spectral_indices_matching_lupus = []
 for index_andsell, element_andsell in enumerate(source_ansdell_lupus):
     for index_tazzari, element_tazzari in enumerate(tazzari_lupus_sources):
         if element_tazzari == element_andsell:
@@ -34,6 +41,7 @@ for index_andsell, element_andsell in enumerate(source_ansdell_lupus):
             flux_matching_TAZZARI_andsell_error_lupus.append(tazzari_lupus_flux_error[index_tazzari])
             flux_matching_tazzari_ANDSELL_lupus.append(flux_ansdell_1_33mm_lupus[index_andsell])
             flux_matching_tazzari_ANDSELL_error_lupus.append(flux_ansdell_1_33mm_error_lupus[index_andsell])
+            spectral_indices_matching_lupus.append(tazzari_lupus_spectral_indices[index_tazzari])
 
 
 matching_sources_ricci_ophiucus_3mm_1mm = []
@@ -105,9 +113,8 @@ while minimum < np.max(spectral_index_ophiucus) + 0.3:
 
 count_list_ophiucus = [x / len(spectral_index_ophiucus) for x in count_list_ophiucus]
 
-print(tazzari_lupus_sources)
 plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus',)
-#plt.scatter(tazzari_lupus_sources, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
+plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
 plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)

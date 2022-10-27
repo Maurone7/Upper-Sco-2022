@@ -160,6 +160,7 @@ with open('Tazzari 2021 2.7mm.txt') as f:
 # ex ' Sz 65 ' becomes 'Sz 65'
 tazzari_lupus_sources = [x.strip() for x in tazzari_lupus_sources]
 tazzari_lupus_flux = [x.strip() for x in tazzari_lupus_flux]
+tazzari_lupus_flux.remove('nan')
 tazzari_lupus_flux_error = [float(x.strip()) for x in tazzari_lupus_flux_error]
 tazzari_lupus_sources.remove('Sz 91')
 tazzari_lupus_spectral_indices.remove('      nan')
@@ -167,7 +168,7 @@ tazzari_lupus_spectral_indices = [float(x.strip()) for x in tazzari_lupus_spectr
 
 
 # one flux for a star is missing, so pop all the data from that line
-tazzari_lupus_flux = [float(x) if x != 'nan' else 0 for x in tazzari_lupus_flux]
+tazzari_lupus_flux = [float(x) if x != 'nan' else tazzari_lupus_flux.pop(tazzari_lupus_flux.index(x)) for x in tazzari_lupus_flux]
 
 
 # remove white spaces in the middle of the name
@@ -270,6 +271,15 @@ for x in wavelengths_to_remove:
 ricci_taurus_flux_3mm = [float(x) for x in ricci_taurus_flux_3mm]
 ricci_wavelengths_3mm = [float(x) for x in ricci_wavelengths_3mm]
 
+ricci_luminosity_taurus_1mm_NOT_LOG = []
+with open('Ricci_taurus_table2.tex.txt') as f:
+    lines = f.readlines()[9:-6]
+    for x in lines:
+        ricci_luminosity_taurus_1mm_NOT_LOG.append(x.split('&')[3])
+
+ricci_luminosity_taurus_1mm_NOT_LOG = [x.strip() for x in ricci_luminosity_taurus_1mm_NOT_LOG]
+ricci_luminosity_taurus_1mm_NOT_LOG = [float(x) for x in ricci_luminosity_taurus_1mm_NOT_LOG]
+
 spectral_indices_taurus = []
 ricci_taurus_sources_1mm = []
 ricci_taurus_fluxes_1mm = []
@@ -280,12 +290,10 @@ with open('Ricci Taurus 1mm.txt') as f:
         ricci_taurus_fluxes_1mm.append(x.split('&')[2])
         spectral_indices_taurus.append(x.split('&')[3])
 
-print(ricci_taurus_sources_1mm, ricci_taurus_fluxes_1mm)
 ricci_taurus_fluxes_1mm = [float(x.strip()) for x in ricci_taurus_fluxes_1mm]
 ricci_taurus_sources_1mm = [x.strip() for x in ricci_taurus_sources_1mm]
 spectral_indices_taurus = [float(x.strip()) for x in spectral_indices_taurus]
 ricci_temperature_taurus_1mm = [4060, 4060, 4730, 3488, 3705, 3560, 4060, 3705, 3850, 3850, 4060, 4900, 3850, 3850, 4730, 3850, 3778, 3778, 5080, 5860, 3705]
-ricci_luminosity_taurus_1mm_NOT_LOG = [0.80, 1.01, 1.32, 0.48, 0.55, 1.01, 0.89, 0.24, 0.91, 0.79, 1.09, 0.90, 0.26, 1.06, 1.26, 0.27, 0.16, 0.73, 6.59, 10.6, 2.27]
 
 sources_ophiucus_cox = []
 fluxes_ophiucus_cox_0_87mm = []
