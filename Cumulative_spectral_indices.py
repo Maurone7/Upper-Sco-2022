@@ -2,8 +2,9 @@ from data_file import tazzari_lupus_flux, tazzari_lupus_flux_error, tazzari_lupu
     flux_ansdell_1_33mm_error_lupus, flux_barenfeld_0_88mm_updated,\
     flux_list_ophiucus_ricci_1mm, source_list_ophiucus_ricci_1mm, ricci_ophiuchi_flux_3_3mm, \
     source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus, tazzari_lupus_spectral_indices,\
-    ricci_taurus_fluxes_1mm, flux_ansdell_1_33mm_lupus
+    ricci_taurus_fluxes_1mm, flux_ansdell_1_33mm_lupus, radius_dust_updated, luminosity_list_barenfeld_updated
 from Histogram_spectral_index import spectral_index_upper_sco
+from Table_3 import temperature_list
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -155,5 +156,18 @@ plt.show()
 print("Upper_sco, Ophiucus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
 print("Upper_sco, Taurus", kstest(spectral_index_upper_sco, spectral_indices_taurus))
 print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, tazzari_lupus_spectral_indices))
-print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, spectral_index_ophiucus + spectral_indices_taurus +
+print("Upper_sco, Together", kstest(spectral_index_upper_sco, spectral_index_ophiucus + spectral_indices_taurus +
                                  tazzari_lupus_spectral_indices))
+
+x_axis = []
+luminosity_list_barenfeld_updated = [10**x for x in luminosity_list_barenfeld_updated]
+for index, element in enumerate(radius_dust_updated):
+    x_axis.append((luminosity_list_barenfeld_updated[index]/(element**2)) ** (1/4))
+plt.scatter(x_axis, spectral_index_upper_sco)
+plt.ylim(1.4,2)
+plt.show()
+
+plt.scatter(temperature_list, spectral_index_upper_sco)
+plt.ylim(1.4,2)
+plt.loglog()
+plt.show()

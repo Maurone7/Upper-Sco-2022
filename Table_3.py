@@ -1,6 +1,6 @@
 from astropy import constants
 from tabulate import tabulate
-from Planck  import alpha
+from Planck import alpha
 import numpy as np
 from data_file import radius_dust_updated, AU_to_cm, source_list_garrett
 from Table_1 import luminosity_list_patimo
