@@ -118,6 +118,7 @@ plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuc
 plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
 plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
+plt.xticks(np.array(np.arange(1.4, 3.1, 0.1)))
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.xscale('log')
 plt.legend()
@@ -163,11 +164,3 @@ x_axis = []
 luminosity_list_barenfeld_updated = [10**x for x in luminosity_list_barenfeld_updated]
 for index, element in enumerate(radius_dust_updated):
     x_axis.append((luminosity_list_barenfeld_updated[index]/(element**2)) ** (1/4))
-plt.scatter(x_axis, spectral_index_upper_sco)
-plt.ylim(1.4,2)
-plt.show()
-
-plt.scatter(temperature_list, spectral_index_upper_sco)
-plt.ylim(1.4,2)
-plt.loglog()
-plt.show()

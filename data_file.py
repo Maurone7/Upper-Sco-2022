@@ -1,12 +1,13 @@
 AU_to_cm = 1.496 * (10 ** 13)
 
-#GARRETT' stuff
+# GARRETT' stuff
 
-source_list_garrett = ['J15530132-2114135', 'J15582981-2310077', 'J15583692-2257153', 'J16001844-2230114', 'J16014086-2258103',
-               'J16020757-2257467', 'J16024152-2138245', 'J16035767-2031055', 'J16042165-2130284', 'J16054540-2023088',
-               'J16062196-1928445', 'J16072625-2432079', 'J16075796-2040087', 'J16082324-1930009', 'J16090075-1908526',
-               'J16111330-2019029', 'J16113134-1838259', 'J16123916-1859284', 'J16135434-2320342', 'J16141107-2305362',
-               'J16142029-1906481', 'J16153456-2242421', 'J16154416-1921171', 'J16181904-2028479']
+source_list_garrett = ['J15530132-2114135', 'J15582981-2310077', 'J15583692-2257153', 'J16001844-2230114',
+                       'J16014086-2258103', 'J16020757-2257467', 'J16024152-2138245', 'J16035767-2031055',
+                       'J16042165-2130284', 'J16054540-2023088', 'J16062196-1928445', 'J16072625-2432079',
+                       'J16075796-2040087', 'J16082324-1930009', 'J16090075-1908526', 'J16111330-2019029',
+                       'J16113134-1838259', 'J16123916-1859284', 'J16135434-2320342', 'J16141107-2305362',
+                       'J16142029-1906481', 'J16153456-2242421', 'J16154416-1921171', 'J16181904-2028479']
 
 # flux (mJy)
 flux_list_2_87mm_garrett = [0.603, 0.58, 5.18, 0.36, 0.28, 0.49, 1.08, 0.41, 5.94, 1, 0.62, 1.08, 2.37, 3.1, 3.19, 0.69,
@@ -62,6 +63,8 @@ temperature_list_barenfeld = []
 temperature_list_barenfeld_error = []
 temperature_list_barenfeld_updated = []
 temperature_list_barenfeld_error_updated = []
+type_barenfeld = []
+type_barenfeld_updated = []
 spectral_type_barenfeld = []
 
 # paper in 2016 has different sources ex. J15521088-2125372 is missing in 2017, but it is present in 2016
@@ -71,6 +74,7 @@ lines = interpolation_function.readlines()[22:]
 for x in lines:
     source_list_barenfeld_2016.append(x.split()[1])
     spectral_type_barenfeld.append(x.split()[2])
+    type_barenfeld.append(x.split()[3])
     luminosity_list_barenfeld.append(float(x.split()[8]))
     luminosity_list_barenfeld_error.append(float(x.split()[9]))
     temperature_list_barenfeld.append(float(x.split()[6]))
@@ -90,7 +94,7 @@ for x in range(len(source_list_barenfeld_2016)):
             luminosity_list_barenfeld_error_updated.append(luminosity_list_barenfeld_error[x])
             temperature_list_barenfeld_updated.append(temperature_list_barenfeld[x])
             temperature_list_barenfeld_error_updated.append(temperature_list_barenfeld_error[x])
-
+            type_barenfeld_updated.append(type_barenfeld[x])
 
 
 flux_barenfeld_0_88mm = []
