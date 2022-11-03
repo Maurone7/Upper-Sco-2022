@@ -158,7 +158,7 @@ print("Upper_sco, Ophiucus", kstest(spectral_index_upper_sco, spectral_index_oph
 print("Upper_sco, Taurus", kstest(spectral_index_upper_sco, spectral_indices_taurus))
 print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, tazzari_lupus_spectral_indices))
 print("Upper_sco, Together", kstest(spectral_index_upper_sco, spectral_index_ophiucus + spectral_indices_taurus +
-                                 tazzari_lupus_spectral_indices))
+                                tazzari_lupus_spectral_indices))
 
 x_axis = []
 luminosity_list_barenfeld_updated = [10**x for x in luminosity_list_barenfeld_updated]
