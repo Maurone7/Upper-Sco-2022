@@ -1,5 +1,3 @@
-import scipy.stats
-
 from data_file import source_list_garrett, source_list_barenfeld_2016, temperature_list_barenfeld,\
     ricci_temperature_taurus_1mm, ricci_luminosity_taurus_1mm_NOT_LOG, spectral_indices_taurus,\
     luminosity_list_barenfeld_updated
@@ -51,12 +49,4 @@ plt.legend()
 plt.xlabel(r"$L [L_{\odot}]$")
 #plt.xlabel(r"$T[\rm K]$", fontsize=20)
 plt.ylabel(r'$\alpha$', fontsize=20)
-plt.show()
-
-import seaborn as sns
-sns.regplot(x = )
-
-plt.gca().invert_xaxis()
-plt.scatter(ricci_luminosity_taurus_1mm_LOG, spectral_indices_taurus, c=ricci_temperature_taurus_1mm)
-plt.xlabel(r"$L [L_{\odot}]$", fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.show()

@@ -114,11 +114,12 @@ while minimum < np.max(spectral_index_ophiucus) + 0.3:
 
 count_list_ophiucus = [x / len(spectral_index_ophiucus) for x in count_list_ophiucus]
 
-plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus',)
+plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus', color='blue')
 plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
-plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s')
+plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s', color='orange')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
 plt.xticks(np.array(np.arange(1.4, 3.1, 0.1)))
+
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.xscale('log')
 plt.legend()
