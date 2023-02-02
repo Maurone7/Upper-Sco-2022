@@ -50,9 +50,3 @@ plt.xlabel(r"$L [L_{\odot}]$")
 #plt.xlabel(r"$T[\rm K]$", fontsize=20)
 plt.ylabel(r'$\alpha$', fontsize=20)
 plt.show()
-
-from Cumulative_spectral_indices import flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, ricci_taurus_fluxes_1mm, spectral_indices_taurus, flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, flux_lupus_1_mm, tazzari_lupus_spectral_indices
-
-from linmix import linmix
-lm = linmix.LinMix(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, xsig[:17], ysig[:17], K=2)
-lm.run_mcmc(silent=True)

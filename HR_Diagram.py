@@ -9,7 +9,7 @@ from Parallaxes import luminosity_106, temperature_list_barenfeld, lower_new_lum
 # import values from Feiden's models
 from Feiden_automatic import temperature_column_10Myr, luminosity_column_10Myr, temperature_column_20Myr,\
     luminosity_column_20Myr, temperature_column_5Myr, luminosity_column_5Myr
-
+from data_file import flux_barenfeld_0_88mm_updated, luminosity_list_barenfeld_updated, temperature_list_barenfeld_updated
 
 fig, ax = plt.subplots()
 
@@ -22,10 +22,16 @@ plt.gcf().subplots_adjust(bottom=0.15, left=0.17)
 #manipulate trasnparency errobars
 kwargs_errobar = {'alpha': 0.3}
 
+temperature_list_barenfeld_updated = [10**x for x in temperature_list_barenfeld_updated]
 #scatter all points from Feiden
 plt.scatter(temperature_list_barenfeld, luminosity_106)
 plt.errorbar(temperature_list_barenfeld, luminosity_106, yerr=(upper_new_luminosity_error_log, lower_new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
 plt.errorbar(temperature_list_barenfeld, luminosity_106, xerr=temperature_list_barenfeld_error_values, ls='none', c='gray', **kwargs_errobar)
+plt.scatter(temperature_list_barenfeld_updated, luminosity_list_barenfeld_updated, c='y')
+
+for index, element in enumerate(flux_barenfeld_0_88mm_updated):
+    if element < 10:
+        plt.scatter(temperature_list_barenfeld_updated[index], luminosity_list_barenfeld_updated[index], c='r')
 
 #interpolate 5Myr
 #plt.scatter(temperature_column_5Myr, luminosity_column_5Myr)
@@ -61,5 +67,5 @@ plt.gca().invert_xaxis()
 plt.xlabel("$T[K]$", fontsize=20), plt.ylabel('log $L/L_{\odot}$', fontsize=20)
 ax.tick_params(which='both', labelsize=15)
 plt.legend()
-plt.savefig('H-R diagram')
-#plt.show()
+#plt.savefig('H-R diagram')
+plt.show()
