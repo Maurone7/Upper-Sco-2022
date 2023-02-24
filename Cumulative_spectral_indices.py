@@ -4,7 +4,6 @@ from data_file import tazzari_lupus_flux, tazzari_lupus_flux_error, tazzari_lupu
     source_names_ophiucus_ricci_3_3mm, spectral_index_ophiucus, spectral_indices_taurus, tazzari_lupus_spectral_indices,\
     ricci_taurus_fluxes_1mm, flux_ansdell_1_33mm_lupus, radius_dust_updated, luminosity_list_barenfeld_updated
 from Histogram_spectral_index import spectral_index_upper_sco
-from Table_3 import temperature_list
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -124,7 +123,7 @@ plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.xscale('log')
 plt.legend()
 ax.tick_params(which='both', labelsize=15)
-plt.savefig('Spectral index vs flux_1mm')
+plt.savefig('Spectral index vs flux_1mm', dpi=300)
 plt.show()
 
 x_ophiucus = np.linspace(np.min(spectral_index_ophiucus) - 0.3, np.max(spectral_index_ophiucus) + 0.3, len(count_list_ophiucus))
@@ -186,7 +185,6 @@ plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.legend()
 ax.tick_params(which='both', labelsize=15)
 plt.show()
-#%%
 fig, ax = plt.subplots()
 
 # set thickness axis
@@ -220,8 +218,7 @@ plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', mark
 plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s', color='orange')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
 plt.xticks(np.array(np.arange(1.4, 3.1, 0.1)))
-
-plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
+plt.xlabel('$Flux_{1mm} [mJy]$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.xscale('log')
 plt.legend()
 plt.xlim(2, 1000), plt.ylim(1.3, 3.5)
