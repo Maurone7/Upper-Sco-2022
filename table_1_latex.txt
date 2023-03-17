@@ -1,11 +1,11 @@
 \begin{longtable}{lr}
 \toprule
-           Source &  log(L/\$L\_\{\textbackslash odot\}\$) \\
+           Source &  log(L/$L_{\odot}$) \\
 \midrule
 \endfirsthead
 
 \toprule
-           Source &  log(L/\$L\_\{\textbackslash odot\}\$) \\
+           Source &  log(L/$L_{\odot}$) \\
 \midrule
 \endhead
 \midrule

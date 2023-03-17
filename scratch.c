@@ -2,7 +2,7 @@
 
 int main()
 {
-    char *filename = "readme.txt";
+    char *filename = "Barenfeld Table 1.txt";
     FILE *fp = fopen(filename, "r");
 
     if (fp == NULL)
