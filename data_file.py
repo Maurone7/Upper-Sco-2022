@@ -1,3 +1,5 @@
+import numpy as np
+
 AU_to_cm = 1.496 * (10 ** 13)
 
 # GARRETT' stuff
@@ -314,3 +316,11 @@ indices_to_pop = [fluxes_ophiucus_cox_0_87mm.index(x) for x in fluxes_ophiucus_c
 source_list_ophiucus_ricci_1mm = ['SR 4', 'GSS 26', 'EL 20', 'DoAr 25', 'EL 24', 'EL 27', 'SR 21', 'IRS 41', ' YLW 16C', 'IRS 49', 'DoAr 33', 'WSB 52', 'WSB 60', 'DoAr 44', 'RNO 90', 'Wa Oph 60', 'AS 209']
 spectral_index_ophiucus = [2.5, 1.9, 2.5, 2.3, 2.2, 2.2, 2.9, 2.1, 2.4, 1.8, 2.2, 1.8, 1.9, 2.2, 2.3, 2.4, 2.4]
 flux_list_ophiucus_ricci_1mm = [79, 215, 151, 405, 664, 564, 220, 84, 123, 40, 64, 88, 156, 168, 111, 250, 441]
+
+
+van_der_plas_a = [18, 22, 23, 25, 30, 41, 57]
+log_van_der_plas_a = [np.log10(x) for x in van_der_plas_a]
+van_der_plas_b = [0.15, 0.16, 0.16, 0.17, 0.19, 0.22, 0.23]
+log_van_der_plas_b = [np.log10(x) for x in van_der_plas_b]
+van_der_plas_radius = [200, 100, 80, 60, 40, 20, 10]
+log_van_der_plas_radius = [np.log10(x) for x in van_der_plas_radius]

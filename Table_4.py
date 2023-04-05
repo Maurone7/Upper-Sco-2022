@@ -1,6 +1,6 @@
 from data_file import source_list_garrett, flux_list_2_87mm_garrett, flux_barenfeld_0_88_error_updated,\
     radius_dust_updated, surface_density_list, AU_to_cm
-from Table_3 import opacity_list_3mm, opacity_list_0_87mm, temperature_list
+from Table_3 import opacity_list_3mm, opacity_list_0_87mm, temperature_list_van_der_plas
 from Planck import planck_function_frequency
 from Parallaxes import distances_updated_upper_sco
 
@@ -29,11 +29,11 @@ def integrand(R, surface_density_list):
 
 for x in range(len(flux_list_2_87mm_garrett)):
     mass_list_3mm.append(Mass(flux_list_2_87mm_garrett[x] * 10 ** (-26), distance_updaeted_upper_sco_in_cm[x],
-                              opacity_list_3mm[x], planck_function_frequency((3*(10**10))/0.287, temperature_list[x]), temperature_list[x]))
+                              opacity_list_3mm[x], planck_function_frequency((3*(10**10)) / 0.287, temperature_list_van_der_plas[x]), temperature_list_van_der_plas[x]))
 
 for x in range(len(flux_list_2_87mm_garrett)):
     mass_list_0_88mm.append(Mass(flux_barenfeld_0_88_error_updated[x] * 10 ** (-26), distance_updaeted_upper_sco_in_cm[x],
-                                 opacity_list_0_87mm[x], planck_function_frequency((3*(10**10))/0.088, temperature_list[x]), temperature_list[x]))
+                                 opacity_list_0_87mm[x], planck_function_frequency((3*(10**10)) / 0.088, temperature_list_van_der_plas[x]), temperature_list_van_der_plas[x]))
 
 for x in range(len(source_list_garrett)):
     mass_list_integral.append(quad(integrand, 0.1 * AU_to_cm, radius_dust_updated[x] * AU_to_cm, args=(surface_density_list[x]))[0])
@@ -47,3 +47,6 @@ with open('Table 4.txt', 'w') as f:
 
 
 #print(tabulate(table, headers=['Sources', 'M_{3mm}(M_{\quad})', 'M_{0.88mm}(M_{\quad})', 'Mass Integral']))
+import pandas as pd
+table_4_pandas = pd.DataFrame(table, columns=['Sources', 'M_{3mm}(M_{\quad})', 'M_{0.88mm}(M_{\quad})', 'Mass Integral'])
+table_4_pandas.to_latex('Table 4 pandas.tex', index=False, escape=False, longtable=True, column_format='lccc')
