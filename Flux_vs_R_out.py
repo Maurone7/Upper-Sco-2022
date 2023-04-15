@@ -94,7 +94,7 @@ for wavelengths in wavelength_list:
             color = 'red'
 
         plt.plot(x_axis_values, y_axis_values, label=('$\lambda = $' + str(wavelength) + " cm " + str(inclinations)
-                                                      + ' degrees'), linestyle=linestyle, color=color)
+                                                      + ' degrees'), color=color)
         y_axis_values = []
         x_axis_values = []
 
