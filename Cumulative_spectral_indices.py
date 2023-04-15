@@ -113,7 +113,7 @@ while minimum < np.max(spectral_index_ophiucus) + 0.3:
 
 count_list_ophiucus = [x / len(spectral_index_ophiucus) for x in count_list_ophiucus]
 
-plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus', color='blue')
+plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuchus', color='blue')
 plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
 plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s', color='orange')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
@@ -140,7 +140,7 @@ plt.setp(ax.spines.values(), linewidth=2)
 plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
 
 # create step diagram
-plt.step(x_ophiucus, count_list_ophiucus, label='Ophiucus')
+plt.step(x_ophiucus, count_list_ophiucus, label='Ophiuchus')
 plt.step(x_taurus, count_list_taurus, label='Taurus-Auriga')
 plt.step(x_lupus, count_list_lupus, label='Lupus')
 plt.step(x_sco, count_list_sco, label='Upper Sco')
@@ -154,7 +154,7 @@ plt.savefig('Cumulative Spectra Indices')
 plt.show()
 
 
-print("Upper_sco, Ophiucus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
+print("Upper_sco, Ophiuchus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
 print("Upper_sco, Taurus", kstest(spectral_index_upper_sco, spectral_indices_taurus))
 print("Upper_sco, Lupus", kstest(spectral_index_upper_sco, tazzari_lupus_spectral_indices))
 print("Upper_sco, Together", kstest(spectral_index_upper_sco, spectral_index_ophiucus + spectral_indices_taurus +
@@ -179,7 +179,7 @@ for i in range(0, 5000, 25):
     plt.plot(xs, ys, color='r', alpha=0.02)
 
 plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus')
-plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus')
+plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuchus')
 
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.legend()
@@ -213,7 +213,7 @@ for i in range(0, 5000, 25):
     line2, = plt.plot(xs, ys, color='r', alpha=0.02)
 
 
-plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiucus', color='blue')
+plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuchus', color='blue')
 plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
 plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s', color='orange')
 plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')

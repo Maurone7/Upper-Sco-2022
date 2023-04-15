@@ -78,4 +78,4 @@ plt.ylabel(r'$F_{0.88\rm mm}$ [mJy]', fontsize=20), plt.xlabel(r'$T_{eff}\rm\ [K
 plt.yscale('log'), plt.xscale('log')
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Fig 1 new')
-#plt.show()
+plt.show()
