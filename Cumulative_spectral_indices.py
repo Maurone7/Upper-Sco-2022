@@ -124,7 +124,8 @@ plt.xscale('log')
 plt.legend()
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Spectral index vs flux_1mm', dpi=300)
-plt.show()
+if __name__ == '__main__':
+    plt.show()
 
 x_ophiucus = np.linspace(np.min(spectral_index_ophiucus) - 0.3, np.max(spectral_index_ophiucus) + 0.3, len(count_list_ophiucus))
 x_lupus = np.linspace(np.min(tazzari_lupus_spectral_indices) - 0.3, np.max(tazzari_lupus_spectral_indices) + 0.3, len(count_list_lupus))
@@ -151,7 +152,8 @@ plt.legend()
 plt.xlabel(r'$\alpha$', fontsize=20), plt.ylabel('Cumulative fraction', fontsize=20)
 ax.tick_params(which='both', labelsize=15)
 plt.savefig('Cumulative Spectra Indices')
-plt.show()
+if __name__ == '__main__':
+    plt.show()
 
 
 print("Upper_sco, Ophiuchus", kstest(spectral_index_upper_sco, spectral_index_ophiucus))
@@ -184,7 +186,8 @@ plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuc
 plt.xlabel('$Flux_{1mm}$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
 plt.legend()
 ax.tick_params(which='both', labelsize=15)
-plt.show()
+if __name__ == '__main__':
+    plt.show()
 fig, ax = plt.subplots()
 
 # set thickness axis
@@ -223,4 +226,6 @@ plt.xscale('log')
 plt.legend()
 plt.xlim(2, 1000), plt.ylim(1.3, 3.5)
 ax.tick_params(which='both', labelsize=15)
-plt.show()
+
+if __name__ == '__main__':
+    plt.show()

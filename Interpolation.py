@@ -42,21 +42,22 @@ for x in range(len(temperature_list_barenfeld_error)):
 #create line limits
 x = np.linspace(np.min(temperature_column_10Myr), np.max(temperature_column_10Myr))
 
-#manipulate trasnparency errobars
-kwargs_errobar = {'alpha':0.3}
+if __name__ == '__main__':
+    #manipulate trasnparency errobars
+    kwargs_errobar = {'alpha':0.3}
 
-#create points and errorbars with datasets already created
-plt.scatter(temperature_column_10Myr, mass_column_10Myr, **kwargs_errobar)
+    #create points and errorbars with datasets already created
+    plt.scatter(temperature_column_10Myr, mass_column_10Myr, **kwargs_errobar)
 
-#scatter star on the interpolation line
-plt.scatter(temperature_list_barenfeld, f(temperature_list_barenfeld), c='red')
-plt.errorbar(temperature_list_barenfeld, f(temperature_list_barenfeld), xerr=temperature_error, ls='none', c='gray', **kwargs_errobar)
-plt.errorbar(temperature_list_barenfeld, f(temperature_list_barenfeld), yerr=masses_new_upper_error, ls='none', c='gray', **kwargs_errobar)
+    #scatter star on the interpolation line
+    plt.scatter(temperature_list_barenfeld, f(temperature_list_barenfeld), c='red')
+    plt.errorbar(temperature_list_barenfeld, f(temperature_list_barenfeld), xerr=temperature_error, ls='none', c='gray', **kwargs_errobar)
+    plt.errorbar(temperature_list_barenfeld, f(temperature_list_barenfeld), yerr=masses_new_upper_error, ls='none', c='gray', **kwargs_errobar)
 
-#show interpolation line
-plt.plot(x, f(x))
-plt.grid()
-plt.xlabel(r"$T_{eff} \rm\ [K]$", fontsize=20), plt.ylabel('$M_{\star} [M_{\odot}]$', fontsize=20)
-ax.tick_params(which='both', labelsize=15)
-plt.savefig('Interpolation')
-#plt.show()
+    #show interpolation line
+    plt.plot(x, f(x))
+    plt.grid()
+    plt.xlabel(r"$T_{eff} \rm\ [K]$", fontsize=20), plt.ylabel('$M_{\star} [M_{\odot}]$', fontsize=20)
+    ax.tick_params(which='both', labelsize=15)
+    plt.savefig('Interpolation')
+    #plt.show()

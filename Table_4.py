@@ -84,3 +84,6 @@ with open('Table 4.txt', 'w') as f:
 import pandas as pd
 table_4_pandas = pd.DataFrame(table, columns=['Sources', 'M_{3mm}(M_{\oplus})', 'M_{0.88mm}(M_{\oplus})', 'Mass Integral'])
 table_4_pandas.to_latex('Table 4 pandas.tex', index=False, escape=False, longtable=True, column_format='lccc')
+
+if __name__ == '__main__':
+    print(tabulate(table, headers=['Sources', 'M_{3mm}(M_{\quad})', 'M_{0.88mm}(M_{\quad})', 'Mass Integral']))

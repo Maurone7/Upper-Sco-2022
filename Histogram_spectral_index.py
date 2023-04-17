@@ -36,14 +36,16 @@ for index, element in enumerate(type_barenfeld_updated):
     if element == 'Evolved':
         type_evolved_spectra_index.append(spectral_index_upper_sco[index])
 
-plt.hist(spectral_index_upper_sco, bins=bins, edgecolor='black', linewidth=2, label='Full')
-plt.hist(type_transitional_spectra_index, bins=bins, edgecolor='orange', linewidth=2, label='Transitional')
-plt.hist(type_evolved_spectra_index, bins=bins, edgecolor='green', linewidth=2, label='Evolved')
+if __name__ == '__main__':
+    plt.hist(spectral_index_upper_sco, bins=bins, edgecolor='black', linewidth=2, label='Full')
+    plt.hist(type_transitional_spectra_index, bins=bins, edgecolor='orange', linewidth=2, label='Transitional')
+    plt.hist(type_evolved_spectra_index, bins=bins, edgecolor='green', linewidth=2, label='Evolved')
 
-plt.ylabel('Frequency', fontsize=20), plt.xlabel(r'Spectral index $\alpha_{abs}$', fontsize=20)
+    plt.ylabel('Frequency', fontsize=20), plt.xlabel(r'Spectral index $\alpha_{abs}$', fontsize=20)
 
-#plt.title('Frequency vs Spectral Index', fontsize=20)
-ax.tick_params(which='both', labelsize=15)
-plt.legend()
-plt.savefig('Spectral index frequency')
-plt.show()
+    #plt.title('Frequency vs Spectral Index', fontsize=20)
+    ax.tick_params(which='both', labelsize=15)
+    plt.legend()
+
+    plt.savefig('Spectral index frequency')
+    plt.show()
