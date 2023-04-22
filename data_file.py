@@ -26,6 +26,12 @@ lower_bound_radius = []
 lower_bound_radius_updated = []
 upper_bound_radius = []
 upper_bound_radius_updated = []
+inclination_list_barenfeld = []
+inclination_list_barenfeld_updated = []
+inclination_list_barenfeld_lower_error = []
+inclination_list_barenfeld_upper_error = []
+inclination_list_barenfeld_lower_error_updated = []
+inclination_list_barenfeld_upper_error_updated = []
 
 # sources in paper of 2017 are different, ex. J15521088-2125372 is missing
 with open('Table 1 Barenfeld.txt', 'r') as f:
@@ -35,7 +41,11 @@ with open('Table 1 Barenfeld.txt', 'r') as f:
         radius_dust.append(int(x.split()[5]))
         lower_bound_radius.append(int((x.split()[6][1:-1])))
         upper_bound_radius.append(int((x.split()[7][1:-1])))
+        inclination_list_barenfeld.append(float(x.split()[14]))
+        inclination_list_barenfeld_lower_error.append(float(x.split()[15][1:-1]))
+        inclination_list_barenfeld_upper_error.append(float(x.split()[16][1:-1]))
     # Radius is in AU
+
 
 
 for x in range(len(source_list_barenfeld_2017)):
@@ -44,7 +54,11 @@ for x in range(len(source_list_barenfeld_2017)):
             radius_dust_updated.append(radius_dust[x])
             lower_bound_radius_updated.append(lower_bound_radius[x])
             upper_bound_radius_updated.append(upper_bound_radius[x])
+            inclination_list_barenfeld_updated.append(inclination_list_barenfeld[x])
+            inclination_list_barenfeld_lower_error_updated.append(inclination_list_barenfeld_lower_error[x])
+            inclination_list_barenfeld_upper_error_updated.append(inclination_list_barenfeld_upper_error[x])
 
+# values for J15583692-2257153, J16042165-2130284 and J16113134-1838259 are missing in paper of 2017
 radius_dust_updated.insert(2, 65)
 lower_bound_radius_updated.insert(2, 0)
 upper_bound_radius_updated.insert(2, 0)
@@ -54,6 +68,15 @@ upper_bound_radius_updated.insert(8, 0)
 radius_dust_updated.insert(16, 65)
 lower_bound_radius_updated.insert(16, 0)
 upper_bound_radius_updated.insert(16, 0)
+inclination_list_barenfeld_updated.insert(2, 0)
+inclination_list_barenfeld_lower_error_updated.insert(2, 0)
+inclination_list_barenfeld_upper_error_updated.insert(2, 0)
+inclination_list_barenfeld_updated.insert(8, 0)
+inclination_list_barenfeld_lower_error_updated.insert(8, 0)
+inclination_list_barenfeld_upper_error_updated.insert(8, 0)
+inclination_list_barenfeld_updated.insert(16, 0)
+inclination_list_barenfeld_lower_error_updated.insert(16, 0)
+inclination_list_barenfeld_upper_error_updated.insert(16, 0)
 
 
 luminosity_list_barenfeld = []

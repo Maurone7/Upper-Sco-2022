@@ -4,14 +4,6 @@ from data_file import luminosity_list_barenfeld, luminosity_list_barenfeld_error
 from scipy.interpolate import interp1d
 import numpy as np
 import matplotlib.pyplot as plt
-fig, ax = plt.subplots()
-
-#set thickness axis
-plt.setp(ax.spines.values(), linewidth=2)
-
-#avoid axis labels being cut
-plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
-
 
 #import values for all sources into a table
 value_single_source = []
@@ -155,42 +147,52 @@ for index, element in enumerate(luminosity_list_barenfeld_NOT_log):
     lower_new_luminosity_error_log.append(np.log10(lower_new_luminosity_error_NOT_log[index] + luminosity_list_barenfeld_NOT_log[index]) - np.log10(luminosity_list_barenfeld_NOT_log[index]))
     upper_new_luminosity_error_log.append(np.log10(upper_new_luminosity_error_NOT_log[index] + luminosity_list_barenfeld_NOT_log[index]) - np.log10(luminosity_list_barenfeld_NOT_log[index]))
 
-#manipulate trasnparency errobars
-kwargs_errobar = {'alpha': 0.3}
-
-#create initial and final point for the line
-x = [-2, 1]
-y = [-2, 1]
 
 luminosity_106 = [np.log10(x) for x in luminosity_106]
 
-plt.scatter(luminosity_list_barenfeld, luminosity_106)
-plt.errorbar(luminosity_list_barenfeld, luminosity_106, xerr=luminosity_list_barenfeld_error, ls='none', c='gray', **kwargs_errobar)
-plt.errorbar(luminosity_list_barenfeld, luminosity_106, yerr=(lower_new_luminosity_error_log, upper_new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
-plt.xlabel('$L_{Barenfeld} log(L_{\star}/L_{\odot})$', fontsize=20), plt.ylabel('$L_{new} log(L_{\star}/L_{\odot})$', fontsize=20)
-plt.grid()
+if __name__ == '__main__':
+    fig, ax = plt.subplots()
 
-#create straight line with equation y=x
-plt.plot(x,y, c='orange')
-ax.tick_params(which='both', labelsize=15)
-plt.savefig('106 Luminosity updated')
-#plt.show()
+    #set thickness axis
+    plt.setp(ax.spines.values(), linewidth=2)
 
-fig, ax = plt.subplots()
+    #avoid axis labels being cut
+    plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
 
-#set thickness axis
-plt.setp(ax.spines.values(), linewidth=2)
+    #manipulate trasnparency errobars
+    kwargs_errobar = {'alpha': 0.3}
 
-#avoid axis labels being cut
-plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
+    #create initial and final point for the line
+    x = [-2, 1]
+    y = [-2, 1]
 
-#create line limits
-x = np.linspace(np.min(temperature_feiden), np.max(temperature_feiden))
+    plt.scatter(luminosity_list_barenfeld, luminosity_106)
+    plt.errorbar(luminosity_list_barenfeld, luminosity_106, xerr=luminosity_list_barenfeld_error, ls='none', c='gray', **kwargs_errobar)
+    plt.errorbar(luminosity_list_barenfeld, luminosity_106, yerr=(lower_new_luminosity_error_log, upper_new_luminosity_error_log), ls='none', c='gray', **kwargs_errobar)
+    plt.xlabel('$L_{Barenfeld} log(L_{\star}/L_{\odot})$', fontsize=20), plt.ylabel('$L_{new} log(L_{\star}/L_{\odot})$', fontsize=20)
+    plt.grid()
 
-plt.plot(x,f(x))
-plt.scatter(temperature_list_barenfeld, masses_106)
-plt.xlabel(r'$T_{eff}\rm[K]$', fontsize=20), plt.ylabel(r'$M_{\star}(M_{\odot})$', fontsize=20)
-plt.grid()
-ax.tick_params(which='both', labelsize=15)
-plt.savefig('Mass 106 Feiden')
-#plt.show()
+    #create straight line with equation y=x
+    plt.plot(x,y, c='orange')
+    ax.tick_params(which='both', labelsize=15)
+    plt.savefig('106 Luminosity updated')
+    #plt.show()
+
+    fig, ax = plt.subplots()
+
+    #set thickness axis
+    plt.setp(ax.spines.values(), linewidth=2)
+
+    #avoid axis labels being cut
+    plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
+
+    #create line limits
+    x = np.linspace(np.min(temperature_feiden), np.max(temperature_feiden))
+
+    plt.plot(x,f(x))
+    plt.scatter(temperature_list_barenfeld, masses_106)
+    plt.xlabel(r'$T_{eff}\rm[K]$', fontsize=20), plt.ylabel(r'$M_{\star}(M_{\odot})$', fontsize=20)
+    plt.grid()
+    ax.tick_params(which='both', labelsize=15)
+    plt.savefig('Mass 106 Feiden')
+    #plt.show()

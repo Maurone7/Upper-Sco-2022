@@ -36,10 +36,12 @@ with open('Table 1.tex', 'w') as f:
     f.write(tabulate(table, headers=['Sources', 'SpT', r'$log(T_{\rm{eff}}/\rm{K})$', 'Distance',
                                      'log frac{l_{\star}}{L_{\odot}}', 'Stellar mass (M_{\star})']))
 
-print(tabulate(table, headers=['Sources', 'SpT', 'log(T_{star}/K)', 'Distance', 'log frac{l_{\star}}{L_{\odot}}', 'Stellar mass (M_{\star})']))
-table = []
-for x in source_list_barenfeld_2016:
-    table.append([x])
+if __name__ == '__main__':
+    print(tabulate(table, headers=['Sources', 'SpT', 'log(T_{star}/K)', 'Distance', 'log frac{l_{\star}}{L_{\odot}}', 'Stellar mass (M_{\star})']))
 
-with open('Sources table.txt', 'w') as f:
-    f.write(tabulate(table))
+    table = []
+    for x in source_list_barenfeld_2016:
+        table.append([x])
+
+    with open('Sources table.txt', 'w') as f:
+        f.write(tabulate(table))
