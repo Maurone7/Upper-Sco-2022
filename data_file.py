@@ -1,5 +1,7 @@
 import numpy as np
 
+upper_sco = {}
+
 AU_to_cm = 1.496 * (10 ** 13)
 
 # GARRETT' stuff
@@ -11,12 +13,16 @@ source_list_garrett = ['J15530132-2114135', 'J15582981-2310077', 'J15583692-2257
                        'J16113134-1838259', 'J16123916-1859284', 'J16135434-2320342', 'J16141107-2305362',
                        'J16142029-1906481', 'J16153456-2242421', 'J16154416-1921171', 'J16181904-2028479']
 
+upper_sco['Source list Garrett'] = source_list_garrett
+
 # flux (mJy)
 flux_list_2_87mm_garrett = [0.603, 0.58, 5.18, 0.36, 0.28, 0.49, 1.08, 0.41, 5.94, 1, 0.62, 1.08, 2.37, 3.1, 3.19, 0.69,
                             54.1, 0.4, 1.25, 0.71, 3.19, 1.26, 2.04, 0.52]
 flux_list_2_87mm_error_garrett = [0.039, 0.029, 0.26, 0.031, 0.034, 0.061, 0.068, 0.034, 0.30, 0.044, 0.42, 0.069, 0.14,
                                   0.18, 0.17, 0.042, 2.71, 0.053, 0.078, 0.044, 0.17, 0.076, 0.11, 0.036]
 
+upper_sco["Flux list 2.87mm garrett"] = flux_list_2_87mm_garrett
+upper_sco["Flux list 2.87mm garrett error"] = flux_list_2_87mm_error_garrett
 
 source_list_barenfeld_2017 = []
 radius_dust = []
@@ -46,7 +52,13 @@ with open('Table 1 Barenfeld.txt', 'r') as f:
         inclination_list_barenfeld_upper_error.append(float(x.split()[16][1:-1]))
     # Radius is in AU
 
-
+upper_sco["Source list Barenfeld 2017"] = source_list_barenfeld_2017
+upper_sco["Radius dust"] = radius_dust
+upper_sco["Lower bound radius"] = lower_bound_radius
+upper_sco["Upper bound radius"] = upper_bound_radius
+upper_sco["Inclination list Barenfeld"] = inclination_list_barenfeld
+upper_sco["Inclination list Barenfeld lower error"] = inclination_list_barenfeld_lower_error
+upper_sco["Inclination list Barenfeld upper error"] = inclination_list_barenfeld_upper_error
 
 for x in range(len(source_list_barenfeld_2017)):
     for z in range(len(source_list_garrett)):
@@ -57,6 +69,7 @@ for x in range(len(source_list_barenfeld_2017)):
             inclination_list_barenfeld_updated.append(inclination_list_barenfeld[x])
             inclination_list_barenfeld_lower_error_updated.append(inclination_list_barenfeld_lower_error[x])
             inclination_list_barenfeld_upper_error_updated.append(inclination_list_barenfeld_upper_error[x])
+
 
 # values for J15583692-2257153, J16042165-2130284 and J16113134-1838259 are missing in paper of 2017
 radius_dust_updated.insert(2, 65)
@@ -77,6 +90,13 @@ inclination_list_barenfeld_upper_error_updated.insert(8, 0)
 inclination_list_barenfeld_updated.insert(16, 0)
 inclination_list_barenfeld_lower_error_updated.insert(16, 0)
 inclination_list_barenfeld_upper_error_updated.insert(16, 0)
+
+upper_sco["Radius dust updated"] = radius_dust_updated
+upper_sco["Lower bound radius updated"] = lower_bound_radius_updated
+upper_sco["Upper bound radius updated"] = upper_bound_radius_updated
+upper_sco["Inclination list barenfeld updated"] = inclination_list_barenfeld_updated
+upper_sco["Inclination list barenfeld lower error updated"] = inclination_list_barenfeld_lower_error_updated
+upper_sco["Inclination list barenfeld upper error updated"] = inclination_list_barenfeld_upper_error_updated
 
 
 luminosity_list_barenfeld = []
@@ -106,10 +126,19 @@ for x in lines:
     temperature_list_barenfeld_error.append(float(x.split()[7]))
 interpolation_function.close()
 
+
 # adjust error, it can not be 0.00, so I added 0.01
 for x in range(len(temperature_list_barenfeld_error)):
     if temperature_list_barenfeld_error[x] == 0.0:
         temperature_list_barenfeld_error[x] += 0.01
+
+upper_sco["Source list Barenfeld 2016"] = source_list_barenfeld_2016
+upper_sco["Spectral type Barenfeld"] = spectral_type_barenfeld
+upper_sco["Type Barenfeld"] = type_barenfeld
+upper_sco["Luminosity_list Barenfeld"] = luminosity_list_barenfeld
+upper_sco["Luminosity_list Barenfeld error"] = luminosity_list_barenfeld_error
+upper_sco["Temperature list Barenfeld"] = temperature_list_barenfeld
+upper_sco["Temperature list Barenfeld error"] = temperature_list_barenfeld_error
 
 # match all the sources from Barenfeld with the sources from Garrett
 for x in range(len(source_list_barenfeld_2016)):
@@ -121,6 +150,11 @@ for x in range(len(source_list_barenfeld_2016)):
             temperature_list_barenfeld_error_updated.append(temperature_list_barenfeld_error[x])
             type_barenfeld_updated.append(type_barenfeld[x])
 
+upper_sco["Luminosity list Barenfeld updated"] = luminosity_list_barenfeld_updated
+upper_sco["Luminosity list Barenfeld error updated"] = luminosity_list_barenfeld_error_updated
+upper_sco["Temperature list Barenfeld updated"] = temperature_list_barenfeld_updated
+upper_sco["Temperature list Barenfeld error updated"] = temperature_list_barenfeld_error_updated
+upper_sco["Type Barenfeld updated"] = type_barenfeld_updated
 
 flux_barenfeld_0_88mm = []
 flux_barenfeld_0_88_error = []
@@ -131,6 +165,9 @@ for x in lines:
     flux_barenfeld_0_88_error.append(float(x.split()[3]))
 interpolation_function.close()
 
+upper_sco["Flux Barenfeld 0.88mm"] = flux_barenfeld_0_88mm
+upper_sco["Flux Barenfeld 0.88mm error"] = flux_barenfeld_0_88_error
+
 flux_barenfeld_0_88mm_updated = []
 flux_barenfeld_0_88_error_updated = []
 
@@ -140,6 +177,8 @@ for x in range(len(source_list_garrett)):
             flux_barenfeld_0_88mm_updated.append(flux_barenfeld_0_88mm[z])
             flux_barenfeld_0_88_error_updated.append(flux_barenfeld_0_88_error[z])
 
+upper_sco["Flux Barenfeld 0.88mm updated"] = flux_barenfeld_0_88mm_updated
+upper_sco["Flux Barenfeld 0.88 error updated"] = flux_barenfeld_0_88_error_updated
 
 # surface density (log)
 surface_density_list = [-1.41, -1.58, 0, -1.98, -2.12, -2.17, -1.37, -2.51, 0, -1.72, -2.77, -1.50, -0.64, -1.10, -1.27,
@@ -148,6 +187,10 @@ surface_density_list_lower_bound = [-0.20, -0.14, 0, -0.13, -0.17, -0.31, -0.17,
                                     -0.15, -0.06, -0.27, 0, -0.10, -0.59, -0.07, -0.12, -0.18, -0.21, -0.18]
 surface_density_list_upper_bound = [0.32, 0.21, 0, 0.16, 0.14, 0.53, 0.14, 0.10, 0, 0.07, 0.13, 0.20, 0.13, 0.18, 0.07,
                                     0.15, 0, 0.20, 0.86, 0.12, 0.17, 0.11, 0.25, 0.29]
+
+upper_sco["Surface density list"] = surface_density_list
+upper_sco["surface density list lower bound"] = surface_density_list_lower_bound
+upper_sco["surface density list upper bound"] = surface_density_list_upper_bound
 
 temperature_feiden = [3060, 3261, 3396, 3517, 3639, 3760, 3888, 4031, 4195, 4397, 4641, 4910, 5214, 5569, 5995, 6618, 7403]
 mass_feiden = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1, 1.2, 1.3, 1.4, 1.5, 1.6, 1.7]
