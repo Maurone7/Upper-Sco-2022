@@ -9,14 +9,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy.stats import kstest
 
-fig, ax = plt.subplots()
-
-# set thickness axis
-plt.setp(ax.spines.values(), linewidth=2)
-
-# avoid axis labels being cut
-plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
-
 def find_flux_1_mm(spectral_index, flux_3_mm):
     return 3**spectral_index * flux_3_mm
 
@@ -210,22 +202,30 @@ for i in range(0, 5000, 25):
 
 lm = linmix.LinMix(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, xsig[:len(flux_barenfeld_0_88mm_updated)], ysig[:len(flux_barenfeld_0_88mm_updated)], K=2)
 lm.run_mcmc(silent=True)
-for i in range(0, 5000, 25):
-    xs = np.arange(2, 1000)
-    ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
-    line2, = plt.plot(xs, ys, color='r', alpha=0.02)
-
-
-plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuchus', color='blue')
-plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
-plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s', color='orange')
-plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
-plt.xticks(np.array(np.arange(1.4, 3.1, 0.1)))
-plt.xlabel('$Flux_{1mm} [mJy]$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
-plt.xscale('log')
-plt.legend()
-plt.xlim(2, 1000), plt.ylim(1.3, 3.5)
-ax.tick_params(which='both', labelsize=15)
 
 if __name__ == '__main__':
+    fig, ax = plt.subplots()
+
+    # set thickness axis
+    plt.setp(ax.spines.values(), linewidth=2)
+
+    # avoid axis labels being cut
+    plt.gcf().subplots_adjust(bottom=0.15, left=0.15)
+
+    for i in range(0, 5000, 25):
+        xs = np.arange(2, 1000)
+        ys = lm.chain[i]['alpha'] + xs * lm.chain[i]['beta']
+        line2, = plt.plot(xs, ys, color='r', alpha=0.02)
+
+    plt.scatter(flux_list_ophiucus_ricci_1mm, spectral_index_ophiucus, label='Ophiuchus', color='blue')
+    plt.scatter(flux_lupus_1_mm, tazzari_lupus_spectral_indices, label='Lupus', marker='^', color='black')
+    plt.scatter(ricci_taurus_fluxes_1mm, spectral_indices_taurus, label='Taurus', marker='s', color='orange')
+    plt.scatter(flux_barenfeld_0_88mm_updated, spectral_index_upper_sco, label='Upper Sco', color='red')
+    plt.xticks(np.array(np.arange(1.4, 3.1, 0.1)))
+    plt.xlabel('$Flux_{1mm} [mJy]$', fontsize=20), plt.ylabel(r'$\alpha$', fontsize=20)
+    plt.xscale('log')
+    plt.legend()
+    plt.xlim(2, 1000), plt.ylim(1.3, 3.5)
+    ax.tick_params(which='both', labelsize=15)
+
     plt.show()
